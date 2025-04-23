@@ -1,7 +1,7 @@
 title: Button
 fields:
   -
-    handle: title
+    handle: button_title
     field:
       type: text
       display: title

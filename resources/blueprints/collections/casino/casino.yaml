@@ -1,0 +1,67 @@
+title: Casino
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            import: teaser_and_image
+          -
+            import: content
+          -
+            handle: rating
+            field:
+              min: 1
+              max: 5
+              type: range
+              display: rating
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: template
+            field:
+              type: template
+              display: Template
+              localizable: true
+          -
+            handle: author
+            field:
+              type: users
+              display: Author
+              default: current
+              localizable: true
+              max_items: 1
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - casino
+              max_items: 1
+              listable: false
+              localizable: true
+          -
+            handle: tags
+            field:
+              type: terms
+              taxonomies:
+                - tags
+              display: tags
+              mode: select

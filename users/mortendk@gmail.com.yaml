@@ -19,8 +19,12 @@ preferences:
     content:
       reorder:
         - 'content::collections'
+        - 'content::collections::casino'
+        - 'content::collections::spil'
         - 'content::collections::pages'
       items:
+        'content::collections::casino': '@move'
+        'content::collections::spil': '@move'
         'content::collections::pages': '@move'
         'content::collections::blog': '@move'
   forms:
@@ -33,4 +37,4 @@ preferences:
   assets:
     assets:
       mode: grid
-  theme: dark
+  theme: light

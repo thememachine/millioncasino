@@ -1,0 +1,12 @@
+title: 'copy code'
+fields:
+  -
+    handle: title
+    field:
+      type: text
+      display: title
+  -
+    handle: code
+    field:
+      type: text
+      display: code

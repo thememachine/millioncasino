@@ -1,0 +1,14 @@
+title: 'Button Game'
+fields:
+  -
+    handle: button_title
+    field:
+      type: text
+      display: 'Button title'
+      width: 33
+  -
+    handle: link
+    field:
+      type: link
+      display: link
+      width: 50
