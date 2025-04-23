@@ -67,3 +67,15 @@ fields:
               fields:
                 -
                   import: hero
+            button:
+              display: button
+              icon: favorite-like
+              fields:
+                -
+                  import: button_game
+            button_code:
+              display: 'button code'
+              icon: favorite-star
+              fields:
+                -
+                  import: copy_code

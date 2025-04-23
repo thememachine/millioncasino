@@ -1,4 +1,4 @@
-title: Casino
+title: Regler
 tabs:
   main:
     display: Main
@@ -24,21 +24,6 @@ tabs:
       -
         fields:
           -
-            handle: rating
-            field:
-              min: 1
-              max: 5
-              type: range
-              display: rating
-          -
-            handle: tags
-            field:
-              type: terms
-              taxonomies:
-                - tags
-              display: tags
-              mode: select
-          -
             handle: author
             field:
               type: users
@@ -47,23 +32,14 @@ tabs:
               localizable: true
               max_items: 1
           -
-            handle: slug
-            field:
-              type: slug
-              localizable: true
-              validate: 'max:200'
-          -
-            handle: parent
-            field:
-              type: entries
-              collections:
-                - casino
-              max_items: 1
-              listable: false
-              localizable: true
-          -
             handle: template
             field:
               type: template
               display: Template
               localizable: true
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'

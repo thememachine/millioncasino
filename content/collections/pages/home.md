@@ -1,36 +1,23 @@
 ---
 id: home
 blueprint: pages
-title: Home
+title: 'Casione Penge'
 template: home
 author: aef29f6b-ac12-4f4d-8668-ef2c762a6500
 assets_field:
   - 1987.png
 updated_by: aef29f6b-ac12-4f4d-8668-ef2c762a6500
-updated_at: 1745437811
-bard:
+updated_at: 1745444099
+blocks:
   -
-    type: paragraph
-    attrs:
-      textAlign: left
-    content:
-      -
-        type: text
-        text: 'I am home '
-  -
-    type: set
-    attrs:
-      id: m9uclmos
-      values:
-        type: images
-        images:
-          - home/omstilling.png
-        layout: grid
-        layout_fullwidth: false
-        theme:
-          color_settings: false
-          text_color: null
-          background_color: null
+    id: m9ug5roz
+    primary: 5186b215-2bfb-4306-a09d-a96242408fd6
+    secondary:
+      - 5186b215-2bfb-4306-a09d-a96242408fd6
+      - 047f41d8-7e8e-42e9-9327-eccd13466207
+      - 7e3fa8ec-fe21-493e-8cef-bb395477a154
+    type: hero_box
+    enabled: true
 ---
 My home page vontent 
 ## Welcome to your brand new Statamic site!

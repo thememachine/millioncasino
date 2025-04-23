@@ -1,12 +1,14 @@
-title: 'copy code'
+title: 'Copy code'
 fields:
   -
     handle: title
     field:
       type: text
       display: title
+      width: 50
   -
     handle: code
     field:
       type: text
       display: code
+      width: 50
