@@ -1,0 +1,13 @@
+title: 'Casino categori'
+fields:
+  -
+    handle: casino_categori
+    field:
+      max_items: 1
+      mode: select
+      taxonomies:
+        - categories
+      type: terms
+      display: Casino
+      validate:
+        - required

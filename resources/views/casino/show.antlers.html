@@ -1,5 +1,16 @@
-<h1 class="text-3xl font-bold mb-4">
+<h1 class="text-7xl font-bold mb-4 pagewidth">
   {{ title }}
+
 </h1>
 
-Lav udtræk af alle stories som har mr green som category
+{{# Get the categoried term and use that slug form the as the selector #}}
+{{ categories }}
+
+<div class="grid grid-cols-4 pagewidth gap-4">
+  {{ collection:spil taxonomy:categories="{slug}" }}
+
+  {{ partial:cards/card }}
+
+  {{ /collection:spil }}
+</div>
+{{ /categories }}

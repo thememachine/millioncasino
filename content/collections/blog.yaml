@@ -3,7 +3,6 @@ template: blog/show
 layout: layout
 taxonomies:
   - tags
-  - categories
 revisions: false
 route: '/blog/{year}-{month}-{day}/{slug}'
 date: true
