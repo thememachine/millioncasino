@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9455e74f1a7f64f6762d6d7462e8a91c",
+    "content-hash": "de15e4c2c199dda807d0a847ec6ed325",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -1466,6 +1466,65 @@
                 "source": "https://github.com/JamesHeinrich/getID3/tree/v1.9.23"
             },
             "time": "2023-10-19T13:18:49+00:00"
+        },
+        {
+            "name": "jonassiewertsen/statamic-external-link",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jonassiewertsen/statamic-external-link.git",
+                "reference": "1942e7fa0382f2b9c53077d64db5155055bf7dbb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jonassiewertsen/statamic-external-link/zipball/1942e7fa0382f2b9c53077d64db5155055bf7dbb",
+                "reference": "1942e7fa0382f2b9c53077d64db5155055bf7dbb",
+                "shasum": ""
+            },
+            "type": "statamic-addon",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Jonassiewertsen\\LinkFieldtype\\ServiceProvider"
+                    ]
+                },
+                "statamic": {
+                    "name": "Link Fieldtype",
+                    "description": "A fieldtype for links"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Jonassiewertsen\\LinkFieldtype\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonas Siewertsen"
+                }
+            ],
+            "description": "A Statamic fieldtype for links",
+            "keywords": [
+                "fieldtype",
+                "link",
+                "statamic"
+            ],
+            "support": {
+                "email": "mail@jonassiewertsen.com",
+                "issues": "https://github.com/jonassiewertsen/statamic-external-link/issues",
+                "source": "https://github.com/jonassiewertsen/statamic-external-link/tree/1.0.3"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/jonassiewertsen",
+                    "type": "github"
+                }
+            ],
+            "time": "2019-12-26T23:14:29+00:00"
         },
         {
             "name": "laragraph/utils",
