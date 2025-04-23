@@ -1,0 +1,34 @@
+<title>{{ seo_title ?? seo_title ?? title }} | {{ brand:name }}</title>
+
+<meta name="robots" content="{{ seo_description ?? seo_description ?? teaser | strip_tags | entities | trim | safe_truncate:160 }}">
+<meta name="googlebot" content="{{ seo_description ?? seo_description ?? teaser | strip_tags | entities | trim | safe_truncate:160 }}">
+<meta name="description" content="{{ seo_description ?? seo_description ?? teaser | strip_tags | entities | trim | safe_truncate:160 }}">
+<meta name="robots" content="{{ seo_index ? 'index' : 'noindex' }}, {{ seo_follow ? 'follow' : 'nofollow' }}">
+<link rel="canonical" href="{{ page:permalink }}" />
+
+
+{{# Opengraph #}}
+<meta property="og:url" content="{{ page:permalink }}" />
+<meta property="og:locale" content="{{ site:locale }}" />
+<meta property="og:site_name" content="{{ brand:name }}">
+<meta property="og:type" content="{{ og_type ?? 'article' }}">
+<meta property="og:title" content="{{ seo_title ?? seo_title ?? title }}">
+<meta property="og:description" content="{{ seo_description ?? seo_description ?? teaser | strip_tags | trim | entities | safe_truncate:160 }}" />
+
+{{ if image }}
+<meta property="og:image" content="{{ config:app.url }}{{ glide :src="image" w="1200" h="630" fit="crop_focal" }}">
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+{{ else }}
+<meta property="og:image" content="{{ config:app.url }}{{ glide :src="brand:opengraph_image" w="1200" h="630" fit="crop_focal" }}">
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+{{/if }}
+
+<meta name="theme-color" content="{{ settings:browser_color }}">
+
+{{# <link rel="manifest" href="/manifest.webmanifest"> #}}
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">

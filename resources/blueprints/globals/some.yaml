@@ -1,0 +1,76 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: bsky
+            field:
+              type: text
+              display: Bluesky
+          -
+            handle: github
+            field:
+              type: text
+              display: Github
+          -
+            handle: discord
+            field:
+              type: text
+              display: discord
+          -
+            handle: mastodon
+            field:
+              type: text
+              display: mastodon
+          -
+            handle: youtube
+            field:
+              type: text
+              display: youtube
+          -
+            handle: instagram
+            field:
+              type: text
+              display: instagram
+          -
+            handle: facebook
+            field:
+              type: text
+              display: facebook
+          -
+            handle: threads
+            field:
+              type: text
+              display: threads
+          -
+            handle: linkedin
+            field:
+              type: text
+              display: linkedin
+          -
+            handle: twitch
+            field:
+              type: text
+              display: twitch
+          -
+            handle: tiktok
+            field:
+              type: text
+              display: tiktok
+          -
+            handle: soundcloud
+            field:
+              type: text
+              display: soundcloud
+          -
+            handle: bandcamp
+            field:
+              type: text
+              display: bandcamp
+  new_tab:
+    display: 'New Tab'
+    sections:
+      -
+        display: 'New Section'

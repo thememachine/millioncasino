@@ -1,0 +1,39 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: header_scipts
+            field:
+              type: textarea
+              display: 'Header scipts'
+              instructions: 'Insert data into the Header'
+          -
+            handle: site_verification
+            field:
+              type: group
+              display: 'site verification'
+              instructions: 'Website verifications'
+              fields:
+                -
+                  handle: mastodon_verification
+                  field:
+                    type: text
+                    display: mastodon_verification
+                -
+                  handle: github_verification
+                  field:
+                    type: text
+                    display: github_verification
+                -
+                  handle: pinterest_verification
+                  field:
+                    type: text
+                    display: pinterest_verification
+          -
+            handle: browser_color
+            field:
+              type: color
+              display: 'Browser Color'

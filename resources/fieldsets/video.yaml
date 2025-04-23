@@ -1,0 +1,22 @@
+title: video
+fields:
+  -
+    handle: title
+    field:
+      type: text
+      display: title
+  -
+    handle: video
+    field:
+      type: video
+      display: video
+  -
+    handle: text
+    field:
+      buttons:
+        - bold
+        - italic
+        - unorderedlist
+        - link
+      type: markdown
+      display: text

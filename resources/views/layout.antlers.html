@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="{{ site:short_locale }}">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{ partial:header/seo }}
+    {{ partial:header/verification }}
+    {{ feedamic }}
+    {{ vite src="resources/js/site.js|resources/css/site.css" }}
+  </head>
+
+  <body class="flex flex-col h-screen text-slate-900" x-data="{ openmenu: false }" :class="openmenu ? 'overflow-y-hidden' : ''">
+
+    {{ partial:header }}
+
+    <main id="main" tabindex="-1" class="flex flex-col flex-grow focus-visible:outline-0 lg:mt-0 mt-20">
+      {{ template_content }}
+    </main>
+
+    {{ partial:footer }}
+  </body>
+
+</html>

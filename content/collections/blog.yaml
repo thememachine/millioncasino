@@ -1,0 +1,18 @@
+title: blog
+template: blog/show
+layout: layout
+taxonomies:
+  - tags
+  - categories
+revisions: false
+route: '/blog/{year}-{month}-{day}/{slug}'
+date: true
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

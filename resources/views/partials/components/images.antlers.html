@@ -1,0 +1,16 @@
+<section class="{{ layout_fullwidth ? 'w-full' : 'pagewidth'}} lg:p-8 ">
+  <article class="pagewidth">
+    <h2 class="text-3xl lg:text-7xl"> {{ title }}</h2>
+    <p class="text-sm text-slate-500"> {{ text }}</p>
+  </article>
+
+  {{ if layout == "grid" }}
+  {{ partial:components/images/grid }}
+  {{ elseif layout == "flow" }}
+  {{ partial:components/images/overflow }}
+  {{ elseif layout == "gallery" }}
+  {{ partial:components/images/gallery }}
+  {{ /if }}
+
+
+</section>

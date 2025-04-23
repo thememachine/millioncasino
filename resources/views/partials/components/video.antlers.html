@@ -1,0 +1,27 @@
+<section class="pagewidth">
+  {{ if title }}
+  <h2 class="text-7xl pb-4">
+    {{ title }}
+  </h2>
+  {{ /if }}
+
+
+
+  {{ if video }}
+
+  {{ if video | is_embeddable }}
+  <iframe src="{{ video | embed_url }}" class="w-full aspect-video"></iframe>
+  {{ else }}
+  <video src="{{ video | embed_url }}" class="w-full aspect-video"></video>
+  {{ /if }}
+
+  {{ /if }}
+
+  {{ if text }}
+  <div class="prose-xl">
+    {{ text}}
+  </div>
+  {{ /if }}
+
+
+</section>

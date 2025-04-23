@@ -1,0 +1,64 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: name
+            field:
+              type: text
+              display: Name
+          -
+            handle: logo
+            field:
+              max_files: 1
+              container: sitesettings
+              type: assets
+              display: Logo
+              mode: grid
+              width: 33
+          -
+            handle: slogan
+            field:
+              buttons:
+                - bold
+                - italic
+              type: markdown
+              display: Slogan
+              width: 66
+          -
+            handle: opengraph_image
+            field:
+              max_files: 1
+              mode: grid
+              container: sitesettings
+              type: assets
+              display: 'Open Graph Image'
+              width: 33
+          -
+            handle: icon_svg
+            field:
+              max_files: 1
+              container: sitesettings
+              type: assets
+              display: 'icon svg'
+              width: 33
+              mode: grid
+          -
+            handle: apple_touch_icon
+            field:
+              max_files: 1
+              mode: grid
+              container: sitesettings
+              type: assets
+              display: 'apple touch icon'
+              width: 33
+          -
+            handle: ico_icon
+            field:
+              max_files: 1
+              container: sitesettings
+              type: assets
+              display: 'ico icon'
+              width: 50

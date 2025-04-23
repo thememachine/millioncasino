@@ -1,0 +1,13 @@
+<div class="flex gap-2 flex-nowrap overflow-y-scroll snap-x py-4 relative">
+  {{ images }}
+  <div class="w-96 shrink-0 snap-center rounded-xl overflow-hidden shadow-lg relative">
+    <img src="{{ glide :src="url" w="600" h="900" fit="crop_focal" }} " alt="{{ alt }}" class="w-full h-full object-cover z-0" loading="lazy" />
+
+    <div class="font-bold z-10 bg-black/30 text-white bottom-0 absolute p-2 w-full text-center">
+      {{ alt }}
+    </div>
+  </div>
+
+  {{ /images }}
+
+</div>

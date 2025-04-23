@@ -1,0 +1,17 @@
+<nav x-cloak x-show="openmenu" @click.outside="openmenu = false" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="-translate-x-full"
+  x-transition:enter-end="translate-x-0" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="translate-x-0" x-transition:leave-end="-translate-x-full"
+  class="md:hidden fixed z-50 left-0 top-12 w-full h-full bg-black/90 shadow-xl" aria-label="Mobile Menu">
+
+
+  {{ nav:main include_home="false" }}
+
+  <a href="{{ url }}" class="p-2 block text-sky-600 {{ if is_current || is_parent }} font-bold {{ /if }}">
+    {{ title }}
+  </a>
+
+  {{ /nav:main  }}
+
+  {{ partial:social }}
+
+
+</nav>

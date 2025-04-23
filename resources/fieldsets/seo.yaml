@@ -1,0 +1,64 @@
+title: SEO
+fields:
+  -
+    handle: seo_title
+    field:
+      type: text
+      display: 'Seo & Opengraph title'
+      character_limit: 100
+  -
+    handle: seo_description
+    field:
+      type: textarea
+      display: 'SEO & Opengraph Description'
+      character_limit: 300
+  -
+    handle: opengraph
+    field:
+      type: group
+      display: Opengraph
+      width: 50
+      fields:
+        -
+          handle: og_type
+          field:
+            options:
+              -
+                key: website
+                value: null
+              -
+                key: article
+                value: null
+            default: article
+            type: select
+            display: og_type
+  -
+    handle: opengraph_image
+    field:
+      max_files: 1
+      mode: grid
+      container: assets
+      type: assets
+      display: 'Opengraph Image'
+      width: 50
+      folder: /
+      dynamic: slug
+  -
+    handle: seo_index
+    field:
+      inline_label: noindex
+      inline_label_when_true: index
+      default: true
+      type: toggle
+      display: 'SEO Index'
+      width: 50
+  -
+    handle: seo_follow
+    field:
+      inline_label: Nofollow
+      inline_label_when_true: Follow
+      default: true
+      type: toggle
+      display: 'SEO Follow'
+      instructions: 'Follow settings for robots'
+      width: 50

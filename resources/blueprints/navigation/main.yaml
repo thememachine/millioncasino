@@ -1,0 +1,11 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: icon_field
+            field:
+              type: icon
+              display: 'Icon Field'

@@ -1,0 +1,24 @@
+<article class="relative">
+
+  <div class="z-0 relative">
+    <a href="{{ url }}" class="">
+      <div class="w-full aspect-video rounded-lg overflow-hidden">
+        {{ if image  }}
+        <img src="{{ glide :src="image" w="200" h="200" fit="crop_focal" }} " alt="{{ image:alt }}" class="w-full h-full object-cover" loading="lazy" />
+        {{ else }}
+        <div class="bg-slate-200">img missing</div>
+        {{ /if }}
+      </div>
+    </a>
+  </div>
+
+  <div class="absolute w-full bottom-0 left-0 bg-gradient-to-t from-black/90 to-transparent z-20 h-32 flex justify-center flex-col p-4">
+
+    <a href="{{ url }}" class="text-white font-bold text-3xl">
+      {{ title }}
+    </a>
+    <div class="text-white ">{{ teaser | truncate:100 }}</div>
+
+  </div>
+
+</article>

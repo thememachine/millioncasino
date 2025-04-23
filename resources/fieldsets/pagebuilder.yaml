@@ -1,0 +1,47 @@
+title: 'Content Pagebuilder'
+fields:
+  -
+    handle: blocks
+    field:
+      type: replicator
+      display: blocks
+      instructions: 'Building Blocks'
+      collapse: true
+      button_label: Blocks
+      sets:
+        blocks:
+          display: blocks
+          icon: favorite-heart
+          sets:
+            cards:
+              display: cards
+              instructions: 'Card view of content'
+              icon: layout-three-columns
+              fields:
+                -
+                  import: cards
+            image_text:
+              display: 'image text'
+              icon: text-formatting-wrap-image-left
+              fields:
+                -
+                  import: image_text
+            images:
+              display: Images
+              instructions: 'image gallery'
+              icon: media-image-picture-gallery
+              fields:
+                -
+                  import: images
+            hero:
+              display: Hero
+              icon: media-image-picture-orientation
+              fields:
+                -
+                  import: hero
+            hero_box:
+              display: 'Hero Box'
+              icon: layout-split-right
+              fields:
+                -
+                  import: hero_box

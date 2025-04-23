@@ -1,0 +1,39 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@source "../views";
+@source "../../content";
+
+[x-cloak] {
+  display: none;
+}
+
+.text {
+  @apply bg-red-500;
+}
+.pagewidth {
+  @apply mx-auto
+    w-full
+    px-2
+    lg:max-w-screen-xl
+    lg:px-0
+    xl:max-w-screen-xl
+    2xl:max-w-screen-2xl;
+}
+
+.center-center {
+  @apply flex items-center justify-center;
+}
+
+.sr-tab {
+  @apply focus:border-red-500 focus:border focus:border-dashed focus:outline-none;
+}
+
+.scrollbar::-webkit-scrollbar {
+  @apply h-2 w-2;
+}
+.scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-slate-400 dark:bg-slate-900;
+}
+.scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}

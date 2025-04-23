@@ -1,0 +1,58 @@
+title: 'Image & Text'
+fields:
+  -
+    handle: title
+    field:
+      type: text
+      display: title
+  -
+    handle: image
+    field:
+      container: assets
+      type: assets
+      display: image
+      width: 50
+      max_files: 1
+  -
+    handle: text
+    field:
+      buttons:
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - quote
+        - link
+      type: markdown
+      display: text
+      width: 50
+  -
+    handle: buttons
+    field:
+      type: group
+      display: buttons
+      fields:
+        -
+          import: button
+          prefix: primary_
+        -
+          import: button
+          prefix: secondary
+  -
+    handle: layout
+    field:
+      type: group
+      display: layout
+      fields:
+        -
+          handle: image_placement
+          field:
+            type: toggle
+            display: 'image placement'
+            width: 33
+        -
+          handle: color
+          field:
+            type: color
+            display: color
+            width: 50

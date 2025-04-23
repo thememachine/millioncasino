@@ -1,0 +1,18 @@
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-4">
+
+  {{ images }}
+
+  {{ if index == 0 }}
+  <div class="col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-4 rounded-lg overflow-hidden relative">
+    <img src="{{ glide :src="url" w="1200" h="600" fit="crop_focal" }} " alt="{{ url:alt }}" class="w-full h-full object-cover" loading="lazy" />
+  </div>
+
+  {{ else }}
+
+  <div class="rounded-lg overflow-hidden relative">
+    <img src="{{ glide :src="url" w="600" h="900" fit="crop_focal" }} " alt="{{ url:alt }}" class="w-full h-full object-cover" loading="lazy" />
+  </div>
+  {{ /if }}
+
+  {{ /images }}
+</div>

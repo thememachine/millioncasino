@@ -1,0 +1,39 @@
+title: 'Layout settings'
+fields:
+  -
+    handle: layout_fullwidth
+    field:
+      inline_label: pagewidth
+      inline_label_when_true: fullwidth
+      type: toggle
+      display: 'Section Layout'
+  -
+    handle: theme
+    field:
+      type: group
+      display: theme
+      fields:
+        -
+          handle: color_settings
+          field:
+            type: toggle
+            display: 'Color Settings'
+        -
+          handle: text_color
+          field:
+            type: color
+            display: 'text color'
+            width: 50
+            if:
+              color_settings: 'equals true'
+        -
+          handle: background_color
+          field:
+            type: color
+            display: 'background color'
+            width: 50
+            swatches:
+              - blue
+              - gray
+            if:
+              color_settings: 'equals true'

@@ -1,0 +1,23 @@
+<section class="pagewidth">
+
+  <h1 class="text-7xl font-bold">Kategories list</h1>
+
+  {{ partial:categories }}
+
+</section>
+
+<section class="pagewidth grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+  {{ taxonomy:categories }}
+
+  <article>
+    {{ partial:cards/card hide_date="true" }}
+
+    list:
+    {{ entries }}
+    {{ title}}
+    {{ /entries }}
+  </article>
+
+
+  {{ /taxonomy:categories }}
+</section>

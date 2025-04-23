@@ -1,0 +1,26 @@
+<h1 class="text-7xl font-bold mb-4 text-slate-700">
+  Kategori : {{ title }}
+</h1>
+
+<img src="{{ glide :src="primary_image" w="900" h="600" fit="crop_focal" }} " alt="{{ primary_image:alt }}" class="">
+
+<div class="prose">{{ teaser }} </div>
+
+
+{{ entries paginate="8" }}
+<section class="pagewidth grid grid-cols-4 gap-4">
+  {{ results }}
+  {{ partial:cards/card }}
+  {{ /results }}
+
+</section>
+
+{{ partial:paginate }}
+
+{{ /entries }}
+
+
+
+
+
+{{ partial:categories }}

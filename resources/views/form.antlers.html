@@ -1,0 +1,39 @@
+<h1 class="text-7xl text-sky-700 font-bold">form page</h1>
+
+{{ form:contact }}
+
+{{ if success }}
+<div class="bg-green-50 text-green-700 p-2">
+  <h3>
+    {{ success }}
+  </h3>
+</div>
+{{ else }}
+
+{{ if errors }}
+<div class="bg-red-50 text-red-700 p-2">
+  {{ errors }}
+  {{ value }}<br>
+  {{ /errors }}
+</div>
+{{ /if }}
+
+
+{{ fields }}
+<article class="p-2 bg-emerald-200 my-2 w-96">
+  <label class="font-bold">{{ display }}</label>
+  {{ field }}
+
+  {{ if error }}
+  <div class="text-red-700 bg-red-50">{{ error }}</div>
+  {{ /if }}
+</article>
+{{ /fields }}
+
+
+<input type="text" class="hidden" name="username">
+
+<button type="submit" class="bg-slate-700 text-slate-100 px-4 py-2  font-bold">Submit</button>
+{{ /if }}
+
+{{ /form:contact }}

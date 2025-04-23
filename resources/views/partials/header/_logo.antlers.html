@@ -1,0 +1,11 @@
+{{# Logo #}}
+{{ if brand.logo }}
+<a href="/">
+  <img src="{{ glide :src="brand:logo" w="50" h="50" fit="crop_focal" }}" alt="{{ brand:name }}">
+  <h1 class="sr-only">{{ site:name }}</h1>
+</a>
+{{ else }}
+<a href="/" class="text-2xl font-bold text-sky-600">
+  <h1>{{ brand:name }}</h1>
+</a>
+{{ /if }}

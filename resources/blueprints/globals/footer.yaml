@@ -1,0 +1,19 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: text
+            field:
+              type: markdown
+              display: text
+          -
+            handle: copyright
+            field:
+              type: text
+          -
+            handle: flair
+            field:
+              type: text

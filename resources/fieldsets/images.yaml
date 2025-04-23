@@ -1,0 +1,45 @@
+title: 'Image Gallery'
+fields:
+  -
+    handle: images
+    field:
+      mode: grid
+      container: assets
+      dynamic: slug
+      type: assets
+      display: images
+  -
+    handle: title
+    field:
+      type: text
+      display: title
+  -
+    handle: text
+    field:
+      buttons:
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - quote
+      type: markdown
+      display: text
+  -
+    handle: layout
+    field:
+      options:
+        -
+          key: grid
+          value: null
+        -
+          key: flow
+          value: null
+        -
+          key: gallery
+          value: null
+      default: grid
+      type: select
+      display: Layout
+      width: 50
+  -
+    import: layout_settings

@@ -1,0 +1,27 @@
+title: Hero
+fields:
+  -
+    handle: hero_title
+    field:
+      type: text
+      display: title
+      instructions: 'hero title'
+  -
+    handle: hero_image
+    field:
+      container: assets
+      dynamic: slug
+      type: assets
+      display: Image
+      mode: grid
+  -
+    handle: hero_text
+    field:
+      type: markdown
+      display: Text
+  -
+    import: button
+    prefix: primary
+  -
+    import: button
+    prefix: button_2

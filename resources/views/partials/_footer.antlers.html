@@ -1,0 +1,37 @@
+<footer class="bg-gray-50 border-t border-gray-100 py-8 flex flex-col items-center justify-center">
+
+  <div class="pagewidth lg:grid lg:grid-cols-12 flex flex-col-reverse">
+    <div class="col-span-4 flex flex-col gap-2">
+
+      <div class="flex flex-row items-center gap-2">
+        {{ if brand:logo }}
+        <img src="{{ glide :src="brand:logo" w="32" h="32" fit="crop_focal" }}" alt="{{ brand:name }}">
+        {{ /if }}
+
+        {{ if brand:name }}
+        <h2 class="font-display text-xl text-slate-800">{{ brand:name }}</h2>
+        {{ /if }}
+
+      </div>
+
+      <div class="text-sm">{{ footer:flair }}</div>
+
+      {{ if footer:text }}
+      <div class="prose">{{ footer:text }}</div>
+      {{ /if }}
+
+      <nav class="flex flex-row flex-wrap gap-x-12 gap-y-4 mr-20 mt-8">
+        {{ partial:social }}
+      </nav>
+    </div>
+
+    <div class="col-span-8 pb-8">
+      {{ partial:menu/menu-footer }}
+    </div>
+  </div>
+
+
+  <div class="text-sm text-center text-slate-700 mt-8">© {{ footer:copyright }}</div>
+
+
+</footer>

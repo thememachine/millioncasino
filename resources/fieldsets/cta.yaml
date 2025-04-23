@@ -1,0 +1,20 @@
+title: CTA
+fields:
+  -
+    handle: text
+    field:
+      type: markdown
+      display: text
+  -
+    handle: title
+    field:
+      type: text
+      display: Title
+  -
+    import: button
+  -
+    handle: image
+    field:
+      container: assets
+      type: assets
+      display: image

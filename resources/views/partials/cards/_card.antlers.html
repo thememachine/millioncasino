@@ -1,0 +1,35 @@
+<article class="card bg-white border border-slate-200 rounded-lg shadow-lg">
+
+  {{ if image  }}
+  <a href="{{ url }}" class="">
+    <div class="w-full aspect-video">
+      <img src="{{ glide :src="image" w="400" h="200" fit="crop_focal" }} " alt="{{ image:alt }}" class="aspect-video w-full h-full object-cover rounded-t-lg" loading="lazy" />
+    </div>
+  </a>
+  {{ else }}
+  <a href="{{ url }}">
+    <div class="w-full aspect-video">
+      <div class="bg-slate-200 hover:bg-slate-300 transition-all w-full aspect-video text-sm">img missing</div>
+    </div>
+  </a>
+  {{ /if }}
+
+  <div class="p-2">
+
+    <a href="{{ url }}" class="">
+      <h2 class="text-2xl font-bold">{{ title }}</h2>
+    </a>
+
+    {{ if  hide_Date }}
+    <time class="text-sm text-gray-200">{{ date format="F j, Y" }}</time>
+    {{ /if }}
+
+    <div class="px-2">{{ teaser | truncate:180 }}</div>
+
+    <div class="text-xs">
+      {{ scope:categories }}
+      <div>{{ categories:title }}</div>
+      {{ /scope:categories }}
+
+    </div>
+</article>

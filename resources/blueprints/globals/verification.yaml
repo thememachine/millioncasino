@@ -1,0 +1,26 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: google_site_verification
+            field:
+              type: text
+              display: google
+          -
+            handle: mastodon_verification
+            field:
+              type: text
+              display: Mastodon
+          -
+            handle: github_verification
+            field:
+              type: text
+              display: 'github verification'
+          -
+            handle: pinterest_verification
+            field:
+              type: text
+              display: 'Pinterest verification'

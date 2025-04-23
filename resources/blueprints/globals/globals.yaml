@@ -1,0 +1,25 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: text
+            field:
+              buttons:
+                - bold
+                - italic
+                - link
+              type: markdown
+              display: text
+          -
+            handle: copyright
+            field:
+              type: text
+              display: copyright
+          -
+            handle: flair
+            field:
+              type: text
+              display: flair

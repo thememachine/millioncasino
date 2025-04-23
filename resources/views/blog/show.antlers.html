@@ -1,0 +1,61 @@
+<div class="w-full aspect-video h-32">
+  {{ if image }}
+  <img src="{{ glide :src="image" w="900" h="300" fit="crop_focal" }}" alt="{{ image:alt }}" class="w-full h-full object-cover" loading="eager" />
+  {{ /if }}
+</div>
+
+
+<div class="pagewidth bg-white mt-4">
+  <div class="text-xl text-slate-600">
+    {{ teaser }}
+  </div>
+
+  <div class="text-2xl uppercase font-bold">
+    {{ categories }}
+    {{ title }}
+    {{ /categories }}
+  </div>
+  <h1 class="text-9xl">
+    {{ title  }}
+  </h1>
+
+  <div class="pagewidth flex justify-end">
+
+
+    <aside class="w-96 border-l-8 border-slate-600 pl-4">
+      <div class="">
+        {{ categories }}
+        <a href="/categories/{{ slug }}" class="font-bold uppercase text-sky-600">{{ title }}</a>
+        {{ /categories }}
+      </div>
+
+      <div class="text-xl my-2 flex flex-col gap-2 text-base">
+        <time datetime="">
+          {{ date iso_format="Do MMMM YYYY" }}
+          {{ date format="H:m" }}
+        </time>
+      </div>
+
+
+      <div class="flex flex-wrap gap-2">
+        {{ tags }}
+        <a href="{{ url }}" class="bg-sky-100 border border-sky-200 px-1 rounded-sm">{{ title }}</a>
+        {{ /tags }}
+      </div>
+
+    </aside>
+
+  </div>
+</div>
+
+{{ bard }}
+{{ partial src="components/{type}" }}
+{{ /bard }}
+
+
+
+</article>
+
+{{ partial:blog/listing limit="5" }}
+<h2 class="p-5">Recent Blog Posts dette ryger ind i slug</h2>
+{{ /partial:blog/listing }}

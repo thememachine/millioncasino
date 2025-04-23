@@ -1,0 +1,69 @@
+title: 'Content Writing'
+fields:
+  -
+    handle: bard
+    field:
+      buttons:
+        - h2
+        - h3
+        - bold
+        - italic
+        - strikethrough
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - quote
+        - anchor
+        - image
+        - code
+        - codeblock
+        - horizontalrule
+        - alignleft
+        - aligncenter
+      toolbar_mode: floating
+      reading_time: true
+      word_count: true
+      remove_empty_nodes: true
+      type: bard
+      display: 'Long form Content'
+      instructions: 'Long form content'
+      container: assets
+      allow_source: false
+      enable_input_rules: false
+      always_show_set_button: true
+      sets:
+        image:
+          display: image
+          icon: media-image-picture-orientation
+          sets:
+            images:
+              display: images
+              icon: media-image-picture-orientation
+              fields:
+                -
+                  import: images
+            video:
+              display: video
+              instructions: 'video youtube etc'
+              icon: media-webcam-video
+              fields:
+                -
+                  import: video
+            quote:
+              display: Quote
+              icon: text-formatting-quotation
+              fields:
+                -
+                  import: quote
+            image_text:
+              display: 'image & Text'
+              icon: text-formatting-wrap-image-left
+              fields:
+                -
+                  import: image_text
+            hero:
+              display: Hero
+              icon: text-formatting-image-top
+              fields:
+                -
+                  import: hero

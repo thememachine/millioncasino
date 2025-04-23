@@ -1,0 +1,14 @@
+title: 'Hero Box'
+fields:
+  -
+    handle: primary
+    field:
+      max_items: 1
+      type: entries
+      display: Primary
+  -
+    handle: secondary
+    field:
+      max_items: 3
+      type: entries
+      display: Secondary

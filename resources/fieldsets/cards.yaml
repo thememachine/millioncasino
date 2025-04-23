@@ -1,0 +1,71 @@
+title: Cards
+fields:
+  -
+    handle: title
+    field:
+      type: text
+      display: Title
+  -
+    handle: text
+    field:
+      buttons:
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - quote
+        - link
+        - image
+        - table
+        - asset
+      type: markdown
+      display: text
+  -
+    handle: entries
+    field:
+      create: false
+      type: entries
+      display: entries
+      width: 66
+  -
+    handle: columns_mobile
+    field:
+      options:
+        -
+          key: 1
+          value: null
+        -
+          key: 2
+          value: null
+        -
+          key: 3
+          value: null
+        -
+          key: 4
+          value: null
+      default: '4'
+      type: button_group
+      display: 'columns mobile'
+      width: 50
+  -
+    handle: columns
+    field:
+      options:
+        -
+          key: 2
+          value: null
+        -
+          key: 3
+          value: null
+        -
+          key: 4
+          value: null
+        -
+          key: 5
+          value: null
+      default: '4'
+      type: button_group
+      display: columns
+      width: 33
+  -
+    import: layout_settings
