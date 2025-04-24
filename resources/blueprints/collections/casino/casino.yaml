@@ -18,17 +18,20 @@ tabs:
             import: pagebuilder
           -
             import: content
-          -
-            handle: taxonomies_field
-            field:
-              mode: select
-              type: taxonomies
-              display: 'Taxonomies Field'
   sidebar:
     display: Sidebar
     sections:
       -
         fields:
+          -
+            handle: categories
+            field:
+              type: terms
+              taxonomies:
+                - categories
+              display: categories
+              mode: select
+              max_items: 1
           -
             handle: rating
             field:
@@ -73,12 +76,3 @@ tabs:
               type: template
               display: Template
               localizable: true
-          -
-            handle: categories
-            field:
-              type: terms
-              taxonomies:
-                - categories
-              display: categories
-              mode: select
-              max_items: 1
