@@ -1,21 +1,21 @@
 ---
 id: home
 blueprint: pages
-title: 'Casione Penge'
+title: 'Million Casino'
 template: home
 author: aef29f6b-ac12-4f4d-8668-ef2c762a6500
 assets_field:
   - 1987.png
 updated_by: aef29f6b-ac12-4f4d-8668-ef2c762a6500
-updated_at: 1745444099
+updated_at: 1745456162
 blocks:
   -
     id: m9ug5roz
-    primary: 5186b215-2bfb-4306-a09d-a96242408fd6
+    primary: e49712be-b6cf-4486-835f-9911640fc253
     secondary:
-      - 5186b215-2bfb-4306-a09d-a96242408fd6
-      - 047f41d8-7e8e-42e9-9327-eccd13466207
-      - 7e3fa8ec-fe21-493e-8cef-bb395477a154
+      - cc8a92bf-2aa7-484d-be06-925317f80780
+      - 0e769849-fdb7-4deb-b254-6d7eabc29ac8
+      - e49712be-b6cf-4486-835f-9911640fc253
     type: hero_box
     enabled: true
 ---

@@ -1,0 +1,19 @@
+title: Spil
+template: spil/show
+layout: layout
+taxonomies:
+  - tags
+  - categories
+revisions: false
+route: 'spil/{slug}'
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true
+structure:
+  root: false
