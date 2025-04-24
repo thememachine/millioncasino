@@ -5,9 +5,9 @@ fields:
     field:
       type: text
       display: 'Button title'
-      width: 33
+      width: 50
   -
-    handle: link
+    handle: button_link
     field:
       type: link
       display: link

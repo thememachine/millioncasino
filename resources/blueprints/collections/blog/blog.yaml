@@ -29,17 +29,6 @@ tabs:
         display: Meta
         fields:
           -
-            handle: categories
-            field:
-              type: terms
-              taxonomies:
-                - categories
-              display: Category
-              mode: select
-              max_items: 1
-              validate:
-                - required
-          -
             import: teaser_and_image
           -
             handle: tags

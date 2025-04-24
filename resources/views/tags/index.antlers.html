@@ -1,16 +1,13 @@
-index
-<h2 class="text-7xl font-bold">tags: </h2>
+<h2 class="text-7xl font-bold">Alle spil </h2>
 {{ taxonomy:count in="tags" }}
 
 {{ taxonomy:tags }}
-<h2 class="text-2xl"><a href="{{ url}}">{{ title }}</a> </h2>
-{{ collection:spil }}
-spil: {{ title }} {{ url}} <br>
-{{# {{ partial:cards/card }} #}}
-{{ /collection:spil }}
+<h2 class="text-2xl font-bold"><a href="{{ url}}">{{ title }}</a> </h2>
 
-{{# {{ entries }}
-<li><a href="{{ url }}">{{ title }}</a></li>
-{{ /entries }} #}}
+
+{{ entries }}
+<a href="{{ url }}">{{ title }}</a>
+
+{{ /entries }}
 
 {{ /taxonomy:tags }}

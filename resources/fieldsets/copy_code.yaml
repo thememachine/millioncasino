@@ -1,13 +1,13 @@
 title: 'Copy code'
 fields:
   -
-    handle: title
+    handle: code_title
     field:
       type: text
       display: title
       width: 50
   -
-    handle: code
+    handle: code_code
     field:
       type: text
       display: code

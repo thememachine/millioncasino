@@ -29,12 +29,20 @@ tabs:
             import: button_game
           -
             import: copy_code
-            prefix: code
   sidebar:
     display: Sidebar
     sections:
       -
         fields:
+          -
+            handle: categories
+            field:
+              type: terms
+              taxonomies:
+                - categories
+              display: categories
+              mode: select
+              max_items: 1
           -
             handle: toggle_field
             field:
@@ -85,12 +93,3 @@ tabs:
               max_items: 1
               listable: false
               localizable: true
-          -
-            handle: categories
-            field:
-              type: terms
-              taxonomies:
-                - categories
-              display: categories
-              mode: select
-              max_items: 1

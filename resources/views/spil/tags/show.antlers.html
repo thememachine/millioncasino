@@ -1,0 +1,16 @@
+<h1 class="text-4xl font-bold pagewidth">
+  {{ title }}
+</h1>
+
+
+{{ entries paginate="2" }}
+<section class="pagewidth grid grid-cols-4 gap-4">
+  {{ results }}
+
+  {{ partial:cards/card }}
+  {{ /results }}
+
+</section>
+{{ partial:paginate }}
+
+{{ /entries }}

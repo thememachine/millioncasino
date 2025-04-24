@@ -1,0 +1,53 @@
+ss
+<div class="aspect-video w-96">
+  {{ if image }}
+  <img src="{{ glide :src="image" w="800" h="600" fit="crop_focal" }}" alt="{{ image:alt }}" class="w-full h-full object-cover" loading="eager" />
+  {{ /if }}
+</div>
+
+
+<div class="pagewidth bg-white mt-4">
+  <div class="text-xl text-slate-600">
+    {{ teaser }}
+  </div>
+
+  <div class="text-lg uppercase font-bold">
+    {{ categories }}
+    {{ title }}
+    {{ /categories }}
+  </div>
+
+  <h1 class="text-9xl">
+    {{ title  }}
+  </h1>
+
+
+  {{ if free }} free
+  {{ else }}
+  p[ay]
+  {{ /if }}
+
+
+
+  <div class="flex flex-wrap gap-2">
+    {{ tags }}
+    <a href="{{ url }}" class="bg-sky-100 border border-sky-200 px-1 rounded-sm">{{ title }}</a>
+    {{ /tags }}
+  </div>
+
+
+  {{ date_start iso_format="Do MMMM YYYY" }}
+  {{ date_start format="H:m" }}
+
+  {{ date_end iso_format="Do MMMM YYYY" }}
+  {{ date_end format="H:m" }}
+
+  {{ if button_link }}
+  <a href="{{ button_link }}" target="_blank" class="bg-red-300 p-2 rounded-lg -bold">{{ button_title}}</a>
+  {{ /if}}
+
+  <div class="text-lg font-bold bg-amber-300 inline-flex">
+
+    {{ code_title}}
+    {{ code_code }}
+  </div>
