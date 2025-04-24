@@ -16,15 +16,13 @@
 
 </section>
 
-
-
-<section class="grid grid-cols-4 gap-4 pagewidth">
-  <div class="col-span-3">
+<section class="grid grid-cols-12 gap-2 pagewidth">
+  <div class="col-span-9">
 
     {{# Get the categoried term and use that slug form the as the selector #}}
     {{ categories }}
 
-    <div class="grid grid-cols-2 pagewidth gap-4 pt-4">
+    <div class=" pagewidth gap-4 pt-4">
       {{ collection:spil taxonomy:categories="{slug}" }}
 
       {{ partial:cards/card-spil }}

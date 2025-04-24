@@ -1,14 +1,13 @@
-show
 <h1 class="text-4xl font-bold pagewidth">
-  {{ title }}
+  type: {{ title }}
 </h1>
 
 
-{{ entries paginate="2" }}
-<section class="pagewidth grid grid-cols-4 gap-4">
+{{ entries paginate="20" }}
+<section class="pagewidth flex flex-col gap-4">
   {{ results }}
 
-  {{ partial:cards/card }}
+  {{ partial:cards/card-spil }}
   {{ /results }}
 
 </section>

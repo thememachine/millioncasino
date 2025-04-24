@@ -1,11 +1,16 @@
-<div class="w-full aspect-video h-32">
+<div class="w-full aspect-video z-10">
   {{ if image }}
-  <img src="{{ glide :src="image" w="900" h="300" fit="crop_focal" }}" alt="{{ image:alt }}" class="w-full h-full object-cover" loading="eager" />
+  <img src="{{ glide :src="image" w="900" h="600" fit="crop_focal" }}" alt="{{ image:alt }}" class="w-full h-full object-cover" loading="eager" />
   {{ /if }}
 </div>
 
 
-<div class="pagewidth bg-white mt-4">
+<div class="pagewidth bg-white z-40 -mt-40 p-4 rounded-2xl">
+
+  <h1 class="text-9xl p-4">
+    {{ title  }}
+  </h1>
+
   <div class="text-xl text-slate-600">
     {{ teaser }}
   </div>
@@ -15,9 +20,7 @@
     {{ title }}
     {{ /categories }}
   </div>
-  <h1 class="text-9xl">
-    {{ title  }}
-  </h1>
+
 
   <div class="pagewidth flex justify-end">
 
@@ -56,6 +59,6 @@
 
 </article>
 
-{{ partial:blog/listing limit="5" }}
+{{# {{ partial:blog/listing limit="5" }}
 <h2 class="p-5">Recent Blog Posts dette ryger ind i slug</h2>
-{{ /partial:blog/listing }}
+{{ /partial:blog/listing }} #}}
