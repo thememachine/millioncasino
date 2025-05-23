@@ -6,15 +6,14 @@ link: 'https://'
 toggle_field: false
 date_settings: true
 author: aef29f6b-ac12-4f4d-8668-ef2c762a6500
-categories: leo-vegas
+categories: mr-green
 updated_by: aef29f6b-ac12-4f4d-8668-ef2c762a6500
-updated_at: 1745459000
+updated_at: 1748016537
 casino_categori: leo-vegas
 tags:
   - live
   - cashback
   - aktiv
-image: 4-3.jpg
 button_link: 'https://morten.dk'
 teaser: |-
   Få 50 Free Spins til Legacy of Dead uden indbetaling
