@@ -30,6 +30,12 @@ fields:
               fields:
                 -
                   import: image_text
+            banners:
+              display: Banners
+              icon: dashboard-layout-3
+              fields:
+                -
+                  import: banners
             cards:
               display: Cards
               instructions: 'Card view of content'

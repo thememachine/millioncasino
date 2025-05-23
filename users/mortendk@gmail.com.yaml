@@ -15,6 +15,12 @@ preferences:
         - tags
     pages:
       after_save: continue_editing
+    banner:
+      columns:
+        - title
+        - primary_image
+        - casino
+        - status
   forms:
     contact:
       columns:

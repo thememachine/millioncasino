@@ -1,10 +1,10 @@
-title: banner
-template: banner/show
+title: Banner
+template: banner
 layout: layout
 taxonomies:
   - casino
 revisions: false
-route: 'banner/{slug}'
+slugs: false
 sort_dir: asc
 date_behavior:
   past: public

@@ -1,0 +1,23 @@
+<!-- 👋 resources/views/casinos/casino.antlers.html -->
+<h1 class="text-6xl pagewidth text-white my-8">{{ title }}</h1>
+
+{{ if primary_image }}
+<div class="w-96  aspect-video z-0">
+  <img src="{{ glide :src="primary_image" w="900" h="300" fit="crop_focal" }}" alt="{{ primary_image:alt }}" class="w-full h-full object-cover" loading="eager" />
+</div>
+{{ /if }}
+
+
+
+<section class="grid grid-cols-2 gap-4 pagewidth">
+  {{# Get the chosen casinos value #}}
+  {{ casino }}
+  {{ casino_value = slug }}
+  {{ /casino}}
+
+
+  {{ collection:banner casino:is="{ casino_value }" }}
+  {{ partial:banners/banner}}
+  {{ /collection:banner }}
+
+</section>

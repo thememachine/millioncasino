@@ -3,6 +3,7 @@ nav:
     reorder:
       - 'content::collections'
       - 'content::collections::banner'
+      - 'content::collections::casinos'
       - 'content::collections::posts'
       - 'content::collections::articles'
       - 'content::collections::pages'
@@ -10,6 +11,7 @@ nav:
       - 'content::navigation::main'
     items:
       'content::collections::banner': '@move'
+      'content::collections::casinos': '@move'
       'content::collections::posts':
         action: '@move'
         icon: entries

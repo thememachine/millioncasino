@@ -13,44 +13,41 @@ tabs:
               validate:
                 - required
           -
-            import: primary_image
+            import: content_markdown
+          -
+            handle: html
+            field:
+              type: textarea
+              display: html
           -
             import: buttons
           -
-            import: content_markdown
-          -
-            import: html_banner
+            handle: terms
+            field:
+              type: textarea
+              display: terms
   sidebar:
     display: Sidebar
     sections:
       -
         fields:
           -
-            handle: parent
+            handle: casino
             field:
-              type: entries
-              collections:
-                - banner
+              type: terms
+              taxonomies:
+                - casino
+              display: casino
+              mode: select
               max_items: 1
-              listable: false
-              localizable: true
+              validate:
+                - required
           -
-            handle: author
-            field:
-              type: users
-              display: Author
-              default: current
-              localizable: true
-              max_items: 1
+            import: primary_image
           -
-            handle: slug
+            handle: date
             field:
-              type: slug
-              localizable: true
-              validate: 'max:200'
-          -
-            handle: template
-            field:
-              type: template
-              display: Template
-              localizable: true
+              type: date
+              default: now
+              validate:
+                - required

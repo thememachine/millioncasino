@@ -1,9 +1,10 @@
-title: casinos
-template: default
+title: Casinos
+template: casinos/casino
 layout: layout
 taxonomies:
   - casino
 revisions: false
+route: 'casino/{slug}'
 sort_dir: asc
 date_behavior:
   past: public

@@ -5,3 +5,5 @@ fields:
     field:
       type: html
       display: html
+      instructions: 'paste raw html'
+      instructions_position: below

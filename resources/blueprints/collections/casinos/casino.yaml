@@ -29,6 +29,9 @@ tabs:
                 - casino
               display: casino
               mode: select
+              max_items: 1
+              validate:
+                - required
           -
             handle: author
             field:

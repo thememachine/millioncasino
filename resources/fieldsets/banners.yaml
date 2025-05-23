@@ -1,4 +1,4 @@
-title: Cards
+title: Banners
 fields:
   -
     handle: entries
@@ -7,9 +7,7 @@ fields:
       type: entries
       display: entries
       collections:
-        - articles
-        - casinos
-        - pages
+        - banner
   -
     handle: columns_info
     field:
