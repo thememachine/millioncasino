@@ -1,27 +1,32 @@
 <section class="pagewidth">
-  {{ if title }}
-  <h2 class="text-7xl pb-4">
-    {{ title }}
-  </h2>
-  {{ /if }}
 
+  {{ if title or text }}
+  <article class="text-center max-w-prose mx-auto pb-4">
+    <h2 class="text-3xl lg:text-7xl"> {{ title }}</h2>
+    <div class="text-sm text-slate-500 max-w-prose"> {{ text }}</div>
+  </article>
+  {{ /if }}
 
 
   {{ if video }}
-
-  {{ if video | is_embeddable }}
-  <iframe src="{{ video | embed_url }}" class="w-full aspect-video"></iframe>
-  {{ else }}
-  <video src="{{ video | embed_url }}" class="w-full aspect-video"></video>
+  {{ video }}
+  <video autoplay loop muted>
+    <source src="{{ url }}" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  {{ /video }}
   {{ /if }}
 
-  {{ /if }}
 
-  {{ if text }}
-  <div class="prose-xl">
-    {{ text}}
+
+  <div class="w-1/2">
+    {{ if video_embed | is_embeddable }}
+    <!-- Youtube and Vimeo -->
+    <iframe src="{{ video_embed | embed_url }}" class="aspect-video"></iframe>
+    {{ else }}
+    <!-- Other HTML5 video types -->
+    <video src="{{ video_embed | embed_url }}"></video>
+    {{ /if }}
   </div>
-  {{ /if }}
-
 
 </section>

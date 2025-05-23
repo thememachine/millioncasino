@@ -1,10 +1,19 @@
+<!-- 👋 resources/views/search.antlers.html -->
 <section class="pagewidth">
-  <h1 class="text-7xl font-bold my-6">Søgnings efter "{{ get:q }}""</h1>
+
+  <h1 class="text-7xl font-bold my-6">Søgnings efter "{{ get:q }}"</h1>
+
+  <form action="/search/" class="flex items-center ">
+    <div class="bg-white flex flex-row gap-2 items-center px-2 border border-slate-300 rounded-md ">
+      <label for="search">{{ svg src="telescope" class="size-4" }}</label>
+      <input type="seach" id="search" name="q" placeholder="" class="p-1 bg-white" value="{{ get:q}}">
+      <button>Søg</button>
+    </div>
+
+  </form>
 
 
-
-
-  <section class="pagewidth grid grid-cols-4 gap-4">
+  <div class="pagewidth grid grid-cols-4 gap-4 mt-4">
 
     {{ search:results index="default" }}
 
@@ -12,12 +21,10 @@
     <h2 class="text-3xl">No results found for "{{ get:q }}".</h2>
     {{ else }}
 
-
     {{ partial:cards/card }}
 
-
-
     {{ /if }}
+
     {{ /search:results }}
-  </section>
+  </div>
 </section>

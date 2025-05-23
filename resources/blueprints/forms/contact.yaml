@@ -9,7 +9,7 @@ tabs:
             field:
               placeholder: Name
               type: text
-              display: name
+              display: Name
               validate:
                 - required
           -
@@ -18,9 +18,17 @@ tabs:
               input_type: email
               placeholder: Email
               type: text
-              display: email
+              display: Email
               validate:
                 - required
+              width: 50
+          -
+            handle: phone
+            field:
+              input_type: tel
+              type: text
+              display: Phone
+              width: 50
           -
             handle: message
             field:

@@ -1,15 +1,23 @@
-title: video
+title: Video
 fields:
+  -
+    handle: video
+    field:
+      container: video
+      restrict: true
+      type: assets
+      display: Video
+      show_set_alt: false
+  -
+    handle: video_embed
+    field:
+      type: video
+      display: 'Video Embed'
   -
     handle: title
     field:
       type: text
-      display: title
-  -
-    handle: video
-    field:
-      type: video
-      display: video
+      display: Title
   -
     handle: text
     field:

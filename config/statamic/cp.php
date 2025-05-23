@@ -53,21 +53,83 @@ return [
     */
 
   'widgets' => [
-
     [
       'type' => 'updater',
       'width' => 100,
-      'sites' => ['en', 'de', 'fr'],
+      'sites' => ['en', 'dk'],
+    ],
+    [
+      'type' => 'collection_count',
+      'collection' => 'posts',
+      'width' => '25'
+    ],
+    [
+      'type' => 'collection_count',
+      'collection' => 'articles',
+      'width' => '25'
+    ],
+    [
+      'type' => 'collection_count',
+      'collection' => 'program',
+      'width' => '25'
+    ],
+    [
+      'type' => 'collection_count',
+      'collection' => 'pages',
+      'width' => '25'
+    ],
+
+    [
+      'type' => 'collection_count',
+      'collection' => 'tags',
+      'width' => '25'
+    ],
+    [
+      'type' => 'collection_count',
+      'collection' => 'categories',
+      'width' => '25'
+    ],
+    [
+      'type' => 'collection_count',
+      'collection' => 'program',
+      'width' => '25'
+    ],
+
+
+    [
+      'type' => 'collection',
+      'collection' => 'articles',
+      'limit' => 10,
+      'width' => '50'
     ],
     [
       'type' => 'collection',
-      'collection' => 'blog',
-      'limit' => 30,
+      'collection' => 'program',
+      'limit' => 10,
+      'width' => '50'
+    ],
+    [
+      'type' => 'collection',
+      'collection' => 'posts',
+      'limit' => 10,
+      'width' => '50'
     ],
     [
       'type' => 'collection',
       'collection' => 'pages',
       'limit' => 10,
+      'width' => '50'
+    ],
+
+    [
+      'type' => 'continue_editing',
+      'width' => 100,
+    ],
+    [
+      'type' => 'unused-assets', // Required
+      'limit' => 100, // Default: 300 – The number of images to display from the widget.
+      'width' => 100, // Default: 100 – The size of the widget.
+      'excluded_paths' => [], // Example: ['assets/myFolder/'] - Default: [] – The paths to exclude from the search.
     ]
   ],
 

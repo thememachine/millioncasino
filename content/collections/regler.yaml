@@ -1,6 +1,0 @@
-title: Regler
-template: regler/show
-revisions: false
-date_behavior:
-  past: public
-  future: private

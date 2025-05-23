@@ -1,39 +1,49 @@
-<h1 class="text-7xl text-sky-700 font-bold">form page</h1>
+<!-- 👋 resources/views/form.antlers.html -->
 
-{{ form:contact }}
-
-{{ if success }}
-<div class="bg-green-50 text-green-700 p-2">
-  <h3>
-    {{ success }}
-  </h3>
-</div>
-{{ else }}
-
-{{ if errors }}
-<div class="bg-red-50 text-red-700 p-2">
-  {{ errors }}
-  {{ value }}<br>
-  {{ /errors }}
-</div>
-{{ /if }}
+<section class="pagewidth">
 
 
-{{ fields }}
-<article class="p-2 bg-emerald-200 my-2 w-96">
-  <label class="font-bold">{{ display }}</label>
-  {{ field }}
+  {{ form:contact }}
 
-  {{ if error }}
-  <div class="text-red-700 bg-red-50">{{ error }}</div>
+
+  {{ if success }}
+  <div class="bg-green-50 text-green-700 p-2">
+    <h3>
+      {{ success }}
+    </h3>
+  </div>
+  {{ else }}
+
+  {{ if errors }}
+  <div class="bg-red-50 text-red-700 p-2">
+    {{ errors }}
+    {{ value }}<br>
+    {{ /errors }}
+  </div>
   {{ /if }}
-</article>
-{{ /fields }}
 
 
-<input type="text" class="hidden" name="username">
+  {{ fields }}
+  <article class="flex flex-col">
+    <div class="flex gap-2 items-center">
 
-<button type="submit" class="bg-slate-700 text-slate-100 px-4 py-2  font-bold">Submit</button>
-{{ /if }}
+      <label class="font-bold">{{ display }}</label>
+      {{ field }}
+    </div>
 
-{{ /form:contact }}
+    {{ if error }}
+    <div class="text-red-700 bg-red-50">{{ error }}</div>
+    {{ /if }}
+  </article>
+  {{ /fields }}
+
+
+
+  <input type="text" class="hidden" name="{{ honeypot ?? 'honeypot' }}">
+
+
+  <button type="submit" class="bg-slate-700 text-slate-100 px-4 py-2  font-bold">Submit</button>
+  {{ /if }}
+
+  {{ /form:contact }}
+</section>

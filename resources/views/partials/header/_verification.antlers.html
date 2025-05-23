@@ -1,8 +1,14 @@
-{{ if verification.google_site_verification }}
-<meta name="google-site-verification" content="{{ verification.google_site_verification }}" />{{ /if }}
-{{ if verification.mastodon_verification }}
-<link rel="me" href="{{ verification.mastodon_verification }}">{{ /if }}
-{{ if verification.github_verification }}
-<link rel="me" href="{{ verification.github_verification }}">{{ /if }}
-{{ if verification.pinterest_verification }}
-<meta name="p:domain_verify" content="{{ verification.pinterest_verification }}" />{{ /if }}
+{{ if settings:site_verification:google_verification }}
+<meta name="google-site-verification" content="{{ settings:site_verification:google_verification }}" />
+{{ /if }}
+{{ if settings:site_verification:mastodon_verification }}
+<link rel="me" href="{{ settings:site_verification:mastodon_verification }}">
+{{ /if }}
+{{ if settings:site_verification:github_verification }}
+<link rel="me" href="{{ settings:site_verification:github_verification }}">
+{{ /if }}
+{{ if settings:site_verification:pinterest_verification }}
+<meta name="p:domain_verify" content="{{ settings:site_verification:pinterest_verification }}" />
+{{ /if }}
+
+{{ settings:site_verification:verification }}

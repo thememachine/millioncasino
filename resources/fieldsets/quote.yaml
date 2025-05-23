@@ -13,11 +13,6 @@ fields:
       type: markdown
       display: 'Markdown Field'
   -
-    handle: name
-    field:
-      type: text
-      display: Name
-  -
     handle: image
     field:
       container: assets
@@ -26,12 +21,12 @@ fields:
       max_files: 1
       mode: grid
   -
+    handle: name
+    field:
+      type: text
+      display: Name
+  -
     handle: position
     field:
       type: text
       display: position
-  -
-    handle: entries_field
-    field:
-      type: entries
-      display: 'Entries Field'

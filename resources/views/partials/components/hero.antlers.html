@@ -1,0 +1,41 @@
+<!-- 👋 resources/views/partials/components/hero.antlers.html -->
+<section class="{{ section_width }} {{ section_height }} {{ section_height_lg }} ">
+  <div class="relative h-full">
+
+    {{# overlay  #}}
+    <div class="h-52 absolute z-10 bottom-0 w-full  bg-linear-to-t from-black to-transparent"></div>
+    <div class="h-52 absolute z-10 top-0 w-full  bg-linear-to-t from-transparent to-black"></div>
+
+    <div class="w-full h-full z-0 absolute top-0 left-0 bg-blue-400">
+      {{ if hero_image }}
+      <img src="{{ glide :src="hero_image" w="1200" h="900" fit="crop_focal" }} " alt=" {{ url:alt }}" class="object-cover w-full h-full">
+      {{ /if }}
+    </div>
+
+
+    <article class="relative h-full w-full flex flex-col {{ horizontal }} {{ vertical }} z-20 p-4 text-white">
+      {{ if hero_title }}
+      <h1 class="font-display text-9xl font-bold text-shadow-lg">
+        {{ hero_title }}
+      </h1>
+      {{ /if }}
+
+      {{ if hero_text }}
+      <div class="prose-2xl">
+        {{ hero_text }}
+      </div>
+      {{ /if }}
+
+      <div class="flex gap-4 mt-4">
+        {{ cta }}
+        {{ partial:buttons/button }}
+        {{ /cta}}
+      </div>
+
+    </article>
+
+
+
+
+  </div>
+</section>

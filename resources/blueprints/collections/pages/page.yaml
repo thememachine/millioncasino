@@ -22,16 +22,6 @@ tabs:
       -
         fields:
           -
-            import: teaser_and_image
-          -
-            handle: tags
-            field:
-              type: terms
-              taxonomies:
-                - tags
-              display: tags
-              mode: select
-          -
             handle: author
             field:
               type: users
@@ -39,12 +29,6 @@ tabs:
               default: current
               localizable: true
               max_items: 1
-          -
-            handle: slug
-            field:
-              type: slug
-              localizable: true
-              validate: 'max:200'
           -
             handle: parent
             field:
@@ -54,6 +38,26 @@ tabs:
               max_items: 1
               listable: false
               localizable: true
+  card:
+    display: Card
+    sections:
+      -
+        display: 'New Section'
+        fields:
+          -
+            import: card
+  settings:
+    display: Settings
+    sections:
+      -
+        display: 'New Section'
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
           -
             handle: template
             field:

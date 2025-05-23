@@ -1,24 +1,28 @@
-<article class="relative">
+<article>
 
-  <div class="z-0 relative">
-    <a href="{{ url }}" class="">
-      <div class="w-full aspect-video rounded-lg overflow-hidden">
-        {{ if image  }}
-        <img src="{{ glide :src="image" w="200" h="200" fit="crop_focal" }} " alt="{{ image:alt }}" class="w-full h-full object-cover" loading="lazy" />
+  <div class="relative">
+    <a href="{{ url }}">
+
+      <div class="w-full aspect-video rounded-lg overflow-hidden z-0 ">
+        {{ if image_card or primary_image }}
+        <img src="{{ glide :src="image_card ?? primary_image" w="400" h="200" fit="crop_focal" }}" alt="{{ image_card:alt ?? primary_image:alt }}" class="w-full h-full object-cover" loading="eager" />
         {{ else }}
-        <div class="bg-slate-200">img missing</div>
+        <div class="w-full aspect-video">
+          <div class="bg-slate-200 hover:bg-slate-300 transition-all w-full aspect-video text-sm flex items-center justify-center">img missing</div>
+        </div>
         {{ /if }}
       </div>
+
+
+      <div class="absolute w-full bottom-0 left-0 bg-gradient-to-t from-black/90 to-transparent z-20 h-32 flex justify-center flex-col p-4">
+
+        <a href="{{ url }}" class="text-white font-bold text-3xl">
+          {{ title }}
+        </a>
+        <div class="text-white text-xl">{{ teaser | truncate:100 }}</div>
+
+      </div>
     </a>
-  </div>
-
-  <div class="absolute w-full bottom-0 left-0 bg-gradient-to-t from-black/90 to-transparent z-20 h-32 flex justify-center flex-col p-4">
-
-    <a href="{{ url }}" class="text-white font-bold text-3xl">
-      {{ title }}
-    </a>
-    <div class="text-white ">{{ teaser | truncate:100 }}</div>
-
   </div>
 
 </article>

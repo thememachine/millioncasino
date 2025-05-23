@@ -1,0 +1,27 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: color_themes
+            field:
+              default:
+                tone-lightest: 'bg-tone-50 text-tone-950'
+                tone-light: 'bg-gray-700 text-gray-100'
+                tone: 'bg-gray-700 text-gray-100'
+                tone-dark: 'bg-gray-700 text-gray-100'
+                tone-darkest: 'bg-tone-9500 text-tone-50'
+                primary-lightest: 'bg-sky-50 text-sky-900'
+                primary-light: 'bg-sky-100 text-sky-800'
+                primary: 'bg-sky-200 text-sky-700'
+                primary-dark: 'bg-sky-300 text-sky-600'
+                primary-darkest: 'bg-sky-400 text-sky-500'
+                secondary-lightest: 'bg-indigo-50 text-indigo-900'
+                secondary-light: 'bg-indigo-100 text-indigo-800'
+                secondary: 'bg-indigo-200 text-indigo-700'
+                secondary-dark: 'bg-indigo-300 text-indigo-600'
+                secondary-darkest: 'bg-indigo-400 text-indigo-500'
+              type: yaml
+              display: 'Color Themese'

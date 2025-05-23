@@ -1,7 +1,34 @@
 nav:
   content:
     reorder:
-      - 'content::collections::casino'
+      - 'content::collections'
+      - 'content::collections::banner'
+      - 'content::collections::posts'
+      - 'content::collections::articles'
+      - 'content::collections::pages'
+      - 'content::navigation'
+      - 'content::navigation::main'
     items:
-      'content::collections::casino': '@move'
-      'content::collections::spil': '@move'
+      'content::collections::banner': '@move'
+      'content::collections::posts':
+        action: '@move'
+        icon: entries
+      'content::collections::articles':
+        action: '@move'
+        icon: book-open
+      'content::collections::pages':
+        action: '@move'
+        icon: book-pages
+      'content::navigation::main': '@move'
+      'content::navigation::footer': '@move'
+  tools:
+    reorder:
+      - 'tools::utilities::git'
+      - 'tools::utilities::logbook'
+      - 'tools::utilities::search'
+    items:
+      'tools::utilities::git': '@move'
+      'tools::utilities::logbook': '@move'
+      'tools::utilities::search': '@move'
+      'tools::utilities::cache': '@move'
+favorites: {  }

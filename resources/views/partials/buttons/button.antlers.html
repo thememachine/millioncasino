@@ -1,0 +1,18 @@
+{{# Define a variable with the style classes #}}
+{{ classes = [
+  'primary'   => 'bg-red-100 text-red-700',
+  'secondary' => 'bg-green-300',
+  'link'      => 'underline'
+] }}
+
+<div class="inline-flex items-center">
+
+  <a href="{{ button_link }}" class="px-3 py-2 rounded-lg flex flex-flow items-center gap-2 {{ classes[button_style] ?? 'default-class' }} ">
+    <div class="size-5">
+      {{ button_icon}}
+    </div>
+    <div>
+      {{ button_title }}
+    </div>
+  </a>
+</div>

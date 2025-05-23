@@ -1,0 +1,8 @@
+post
+<h1 class="text-9xl pagewidth">{{ title }}</h1>
+
+<div class="w-96  aspect-video z-0">
+  {{ if primary_image }}
+  <img src="{{ glide :src="primary_image" w="900" h="300" fit="crop_focal" }}" alt="{{ primary_image:alt }}" class="w-full h-full object-cover" loading="eager" />
+  {{ /if }}
+</div>

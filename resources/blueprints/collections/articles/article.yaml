@@ -1,0 +1,85 @@
+title: Articles
+tabs:
+  main:
+    display: Content
+    sections:
+      - fields:
+          - handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          - import: primary_image
+          - handle: teaser
+            field:
+              type: markdown
+              display: Teaser
+              buttons:
+                - bold
+                - italic
+          - import: content
+  card:
+    display: Card
+    sections:
+      - display: Card
+        instructions: "Preview for cards"
+        fields:
+          - import: card
+  seo:
+    display: SEO
+    sections:
+      - display: "Seo Settings"
+        fields:
+          - import: seo
+  settings:
+    display: Settings
+    sections:
+      - display: Settings
+        fields:
+          - handle: author
+            field:
+              type: users
+              display: Author
+              default: current
+              localizable: true
+              max_items: 1
+          - handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: "max:200"
+          - handle: template
+            field:
+              type: template
+              display: Template
+              localizable: true
+  sidebar:
+    display: Sidebar
+    sections:
+      - display: Meta
+        fields:
+          - handle: categories
+            field:
+              type: terms
+              taxonomies:
+                - categories
+              display: Category
+              mode: select
+              max_items: 1
+              validate:
+                - required
+          - handle: tags
+            field:
+              type: terms
+              taxonomies:
+                - tags
+              display: Tags
+              mode: select
+          - handle: date
+            field:
+              type: date
+              required: true
+              default: now
+              validate:
+                - required

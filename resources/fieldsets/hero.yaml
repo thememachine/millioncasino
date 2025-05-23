@@ -4,24 +4,26 @@ fields:
     handle: hero_title
     field:
       type: text
-      display: title
+      display: Title
       instructions: 'hero title'
   -
     handle: hero_image
     field:
       container: assets
-      dynamic: slug
       type: assets
       display: Image
       mode: grid
+      max_files: 1
+      width: 33
   -
     handle: hero_text
     field:
       type: markdown
       display: Text
+      width: 66
   -
-    import: button
-    prefix: primary
+    import: buttons
   -
-    import: button
-    prefix: button_2
+    import: layout_alignment
+  -
+    import: layout_section

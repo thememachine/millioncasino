@@ -1,0 +1,52 @@
+<h1 class="text-9xl pagewidth">{{ title }}</h1>
+
+<div class="w-96  aspect-video z-0">
+  {{ if primary_image }}
+  <img src="{{ glide :src="primary_image" w="900" h="300" fit="crop_focal" }}" alt="{{ primary_image:alt }}" class="w-full h-full object-cover" loading="eager" />
+  {{ /if }}
+</div>
+
+
+{{ if program }}
+<div class="text-3xl uppercase font-bold pagewidth">
+  {{ program }}
+  <a href="/program/{{ slug }}" class="underline py-4">{{ title }}</a>
+  {{ /program }}
+</div>
+{{ /if}}
+
+
+<time datetime="">
+  {{ date iso_format="Do MMMM YYYY" }}
+  {{ date format="H:m" }}
+</time>
+
+
+
+<section class="pagewidth">
+
+  <div class="text-sm text-slate-500 max-w-prose"> {{ text }}</div>
+
+
+  {{ if video }}
+  {{ video }}
+  <video autoplay loop muted class="w-full aspect-video">
+    <source src="{{ url }}" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  {{ /video }}
+  {{ /if }}
+
+  <div class="w-full">
+    {{ if video_embed | is_embeddable }}
+    <!-- Youtube and Vimeo -->
+    <iframe src="{{ video_embed | embed_url }}" class="w-full aspect-video"></iframe>
+    {{ else }}
+    <!-- Other HTML5 video types -->
+    <video src="{{ video_embed | embed_url }}"></video>
+    {{ /if }}
+  </div>
+
+
+
+</section>

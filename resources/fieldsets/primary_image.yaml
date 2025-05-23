@@ -1,0 +1,10 @@
+title: 'Primary Image'
+fields:
+  -
+    handle: primary_image
+    field:
+      max_files: 1
+      mode: grid
+      container: assets
+      type: assets
+      display: 'Primary Image'

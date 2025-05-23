@@ -1,0 +1,43 @@
+title: 'Layout Alignment'
+fields:
+  -
+    handle: content_layout
+    field:
+      type: section
+      display: 'Content Layout'
+      instructions: 'Content Alignment'
+  -
+    handle: vertical
+    field:
+      options:
+        -
+          key: justify-start
+          value: Top
+        -
+          key: justify-center
+          value: Center
+        -
+          key: justify-end
+          value: Bottom
+      default: justify-center
+      type: button_group
+      display: 'Vertical Alignment'
+      width: 50
+      replicator_preview: false
+  -
+    handle: horizontal
+    field:
+      options:
+        -
+          key: items-start
+          value: Left
+        -
+          key: items-center
+          value: Center
+        -
+          key: items-end
+          value: Right
+      default: items-center
+      type: button_group
+      display: 'Horizontal layout'
+      width: 50

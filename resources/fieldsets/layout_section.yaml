@@ -1,0 +1,103 @@
+title: 'Layout Section'
+fields:
+  -
+    handle: section_field
+    field:
+      type: section
+      display: 'Section Settings'
+  -
+    handle: revealer_field
+    field:
+      type: revealer
+      display: 'Width & Height'
+  -
+    handle: section_width
+    field:
+      options:
+        -
+          key: w-full
+          value: Fullwidth
+        -
+          key: pagewidth
+          value: Page
+      type: button_group
+      display: 'Section width'
+      default: pagewidth
+      if:
+        revealer_field: 'equals true'
+  -
+    handle: section_height_lg
+    field:
+      options:
+        -
+          key: 'lg:h-screen'
+          value: null
+        -
+          key: 'lg:h-auto'
+          value: null
+        -
+          key: 'lg:h-dvh'
+          value: null
+        -
+          key: 'lg:h-[50dvh]'
+          value: null
+        -
+          key: 'lg:h-[75dvh]'
+          value: null
+        -
+          key: 'lg:h-[80dvh]'
+          value: null
+        -
+          key: 'lg:h-[90dvh]'
+          value: null
+        -
+          key: 'lg:aspect-video lg:h-full'
+          value: null
+        -
+          key: 'lg:aspect-square lg:h-full'
+          value: null
+      default: 'lg:h-auto'
+      type: select
+      display: 'Height LG screens'
+      width: 50
+      if:
+        revealer_field: 'equals true'
+  -
+    handle: section_height
+    field:
+      options:
+        -
+          key: h-screen
+          value: null
+        -
+          key: h-auto
+          value: null
+        -
+          key: h-dvh
+          value: null
+        -
+          key: 'h-[50dvh]'
+          value: null
+        -
+          key: 'h-[75dvh]'
+          value: null
+        -
+          key: 'h-[80dvh]'
+          value: null
+        -
+          key: 'h-[90dvh]'
+          value: null
+        -
+          key: 'aspect-video h-full'
+          value: null
+        -
+          key: 'aspect-square h-full'
+          value: null
+      default: h-auto
+      type: select
+      display: Height
+      width: 50
+      if:
+        revealer_field: 'equals true'
+  -
+    import: color_scheme

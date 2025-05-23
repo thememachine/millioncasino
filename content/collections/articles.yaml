@@ -1,0 +1,18 @@
+title: Articles
+template: articles/show
+layout: layout
+taxonomies:
+  - tags
+  - categories
+revisions: false
+route: '/{categories}/{year}-{month}-{day}/{slug}'
+date: true
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

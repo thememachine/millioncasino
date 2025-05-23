@@ -1,35 +1,36 @@
 <article class="bg-white flex flex-row">
 
   <div class="w-1/3 shrink-0">
-    {{ if image  }}
+    {{ if image_card or primary_image }}
+
     <a href="{{ url }}" class="">
-      <div class="w-full aspect-square">
-        <img src="{{ glide :src="image" w="200" h="200" fit="crop_focal" }} " alt="{{ image:alt }}" class="w-full h-full object-cover" loading="lazy" />
+      <div class="w-full aspect-4/3 rounded-sm overflow-hidden">
+        <img src="{{ glide :src="image_card ?? primary_image" w="200" h="200" fit="crop_focal" }}" alt="{{ image_card:alt ?? primary_image:alt }}" class="w-full h-full object-cover" loading="eager" />
       </div>
     </a>
     {{ else }}
     <a href="{{ url }}">
       <div class="w-full aspect-square">
-        <div class="bg-slate-200">img missing</div>
+        <div class="bg-slate-100">img missing</div>
       </div>
     </a>
     {{ /if }}
 
   </div>
-  <div class="p-2 w-full">
+  <div class="px-2 w-full">
 
     <a href="{{ url }}" class="">
       <h2 class="text-2xl font-semibold">{{ title }}</h2>
     </a>
 
-    <div class="">{{ teaser | truncate:100 }}</div>
+    <div class="text-sm">{{ teaser | truncate:100 | strip_tags }}</div>
 
     {{ unless hide_date }}
     <time class="text-sm">{{ date format="F j, Y" }}</time>
     {{ /if }}
 
 
-    <div class="text-sm">
+    <div class="text-xs">
       {{ scope:categories }}
       <div>{{ categories:title }}</div>
       {{ /scope:categories }}

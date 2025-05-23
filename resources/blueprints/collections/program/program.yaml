@@ -1,0 +1,100 @@
+title: Program
+tabs:
+  main:
+    display: Content
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: video_embed
+            field: video.video_embed
+          -
+            handle: video
+            field: video.video
+          -
+            import: content_markdown
+  card:
+    display: Card
+    sections:
+      -
+        display: Card
+        instructions: 'Preview for cards'
+        fields:
+          -
+            import: card
+  seo:
+    display: SEO
+    sections:
+      -
+        display: 'Seo Settings'
+        fields:
+          -
+            import: seo
+  settings:
+    display: Settings
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: template
+            field:
+              type: template
+              display: Template
+              localizable: true
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: program_categories
+            field:
+              type: terms
+              taxonomies:
+                - program_categories
+              display: Program
+              mode: select
+              max_items: 1
+              create: false
+              validate:
+                - required
+          -
+            handle: tags
+            field:
+              type: terms
+              taxonomies:
+                - tags
+              display: Tags
+              mode: select
+          -
+            handle: author
+            field:
+              type: users
+              display: Author
+              default: current
+              localizable: true
+              max_items: 1
+          -
+            handle: date
+            field:
+              type: date
+              required: true
+              default: now
+              validate:
+                - required
+              duplicate: false
+              inline: true
+              time_enabled: true

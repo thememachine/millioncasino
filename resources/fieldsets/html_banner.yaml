@@ -1,0 +1,7 @@
+title: 'HTML banner'
+fields:
+  -
+    handle: html
+    field:
+      type: html
+      display: html

@@ -11,6 +11,11 @@ tabs:
               display: 'Header scipts'
               instructions: 'Insert data into the Header'
           -
+            handle: footer_script
+            field:
+              type: textarea
+              display: 'Footer script'
+          -
             handle: site_verification
             field:
               type: group
@@ -18,20 +23,30 @@ tabs:
               instructions: 'Website verifications'
               fields:
                 -
-                  handle: mastodon_verification
+                  handle: google_verification
                   field:
                     type: text
-                    display: mastodon_verification
+                    display: 'Google Verification'
                 -
                   handle: github_verification
                   field:
                     type: text
-                    display: github_verification
+                    display: 'Github verification'
+                -
+                  handle: mastodon_verification
+                  field:
+                    type: text
+                    display: 'Mastodon Verification'
                 -
                   handle: pinterest_verification
                   field:
                     type: text
-                    display: pinterest_verification
+                    display: 'Pinterest Verification'
+                -
+                  handle: verification
+                  field:
+                    type: textarea
+                    display: verification
           -
             handle: browser_color
             field:

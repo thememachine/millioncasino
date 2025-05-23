@@ -4,15 +4,16 @@ fields:
     handle: title
     field:
       type: text
-      display: title
+      display: Title
   -
     handle: image
     field:
       container: assets
       type: assets
       display: image
-      width: 50
+      width: 33
       max_files: 1
+      mode: grid
   -
     handle: text
     field:
@@ -25,34 +26,28 @@ fields:
         - link
       type: markdown
       display: text
-      width: 50
+      width: 66
   -
-    handle: buttons
-    field:
-      type: group
-      display: buttons
-      fields:
-        -
-          import: button
-          prefix: primary_
-        -
-          import: button
-          prefix: secondary
+    import: buttons
   -
     handle: layout
     field:
       type: group
-      display: layout
       fields:
+        -
+          handle: image_placement_text_alignment
+          field:
+            type: section
+            display: 'Image placement & Text Alignment'
+            instructions: 'Image & Text Layout'
         -
           handle: image_placement
           field:
             type: toggle
-            display: 'image placement'
-            width: 33
+            display: 'Image Placement'
+            inline_label: Left
+            inline_label_when_true: Right
         -
-          handle: color
-          field:
-            type: color
-            display: color
-            width: 50
+          import: layout_alignment
+  -
+    import: layout_section

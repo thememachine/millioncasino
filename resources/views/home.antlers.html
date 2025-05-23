@@ -1,8 +1,16 @@
+<!-- 👋 resources/views/home.antlers.html -->
+
+
+
+{{# give em all  #}}
+{{ partial:list/all paginate="3"}}
+
+{{# PAgebuild stuff #}}
 {{ blocks }}
 {{ partial src="components/{type}" }}
 {{ /blocks }}
 
 
 {{ bard }}
-{{# {{ partial src="components/{type}" }} #}}
+{{ partial src="components/{type}" }}
 {{ /bard }}

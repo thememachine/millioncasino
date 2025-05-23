@@ -1,0 +1,18 @@
+<!-- 👋 resources/views/blog/tags/show.antlers.html -->
+<h1 class="text-6xl font-bold pagewidth">
+  {{ title }}
+</h1>
+
+
+{{ entries paginate="12" }}
+<section class="pagewidth grid grid-cols-1 lg:grid-cols-4 gap-4">
+  {{ results }}
+
+  {{ partial:cards/card }}
+  {{ /results }}
+
+</section>
+
+{{ partial:paginate }}
+
+{{ /entries }}

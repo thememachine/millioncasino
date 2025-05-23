@@ -29,6 +29,10 @@
 <meta name="theme-color" content="{{ settings:browser_color }}">
 
 {{# <link rel="manifest" href="/manifest.webmanifest"> #}}
-<link rel="icon" href="/favicon.ico" sizes="32x32">
-<link rel="icon" href="/icon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+{{ if brand:icon_ico }}
+<link rel="icon" href="/{{ brand:icon_ico }}" sizes="32x32">{{ /if }}
+{{ if brand:icon_svg }}
+<link rel="icon" href="/{{ brand:icon_svg }}" type="image/svg+xml">{{ /if }}
+{{ if brand:apple_touch_icon }}
+<link rel="apple-touch-icon" href="/{{ brand:apple_touch_icon }}">{{ /if }}

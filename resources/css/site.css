@@ -1,15 +1,63 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/forms";
 @source "../views";
 @source "../../content";
 
+/* sets the theme */
+@theme {
+  --font-display: "Oswald", "sans-serif";
+
+  --color-tone-50: oklch(0.984 0.003 247.858);
+  --color-tone-100: oklch(0.968 0.007 247.896);
+  --color-tone-200: oklch(0.929 0.013 255.508);
+  --color-tone-300: oklch(0.869 0.022 252.894);
+  --color-tone-400: oklch(0.704 0.04 256.788);
+  --color-tone-500: oklch(0.554 0.046 257.417);
+  --color-tone-600: oklch(0.446 0.043 257.281);
+  --color-tone-700: oklch(0.372 0.044 257.287);
+  --color-tone-800: oklch(0.279 0.041 260.031);
+  --color-tone-900: oklch(0.208 0.042 265.755);
+  --color-tone-950: oklch(0.129 0.042 264.695);
+
+  --color-background: ;
+  --color-on-background: ;
+
+  --surface: ;
+  --on-surface: ;
+
+  --primary: ;
+  --on-primary: ;
+  --primary-alt: ;
+  --on-primary-alt: ;
+
+  --secondary: ;
+  --on-secondary: ;
+  --secondary-alt: ;
+  --on-secondary-alt: ;
+
+  --tetiary: ;
+  --on-tetiary: ;
+  --tetiary-alt: ;
+  --on-tetiary-alt: ;
+
+  --action: ;
+}
+
+/* Fonts */
+@font-face {
+  font-family: Oswald;
+  font-style: normal;
+  font-display: swap;
+  src: url("/resources/fonts/oswald-regular.woff2") format("woff2");
+}
+
+/* fix for  */
 [x-cloak] {
   display: none;
 }
 
-.text {
-  @apply bg-red-500;
-}
+/* basic page width */
 .pagewidth {
   @apply mx-auto
     w-full
@@ -27,7 +75,7 @@
 .sr-tab {
   @apply focus:border-red-500 focus:border focus:border-dashed focus:outline-none;
 }
-
+/* scrollbar fix */
 .scrollbar::-webkit-scrollbar {
   @apply h-2 w-2;
 }

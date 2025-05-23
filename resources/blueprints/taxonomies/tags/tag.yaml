@@ -1,4 +1,4 @@
-title: tag
+title: Tags
 tabs:
   main:
     display: Main
@@ -12,8 +12,6 @@ tabs:
               required: true
               validate:
                 - required
-          -
-            import: teaser_and_image
   sidebar:
     display: Sidebar
     sections:

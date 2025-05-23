@@ -1,0 +1,25 @@
+title: Card
+fields:
+  -
+    handle: title_card
+    field:
+      type: text
+      display: Title
+      instructions: 'This will overwrite the contents title for the card'
+      instructions_position: below
+  -
+    handle: image_card
+    field:
+      max_files: 1
+      mode: grid
+      container: assets
+      type: assets
+      display: Image
+      width: 33
+  -
+    handle: teaser_card
+    field:
+      type: textarea
+      display: 'Teaser Text'
+      width: 66
+      character_limit: 200

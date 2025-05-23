@@ -1,4 +1,4 @@
-<footer class="bg-gray-50 border-t border-gray-100 py-8 flex flex-col items-center justify-center">
+<footer class="bg-linear-to-b from-cyan-900 to-cyan-700 text-white border-t border-gray-100 py-8 flex flex-col items-center justify-center">
 
   <div class="pagewidth lg:grid lg:grid-cols-12 flex flex-col-reverse">
     <div class="col-span-4 flex flex-col gap-2">
@@ -9,7 +9,7 @@
         {{ /if }}
 
         {{ if brand:name }}
-        <h2 class="font-display text-xl text-slate-800">{{ brand:name }}</h2>
+        <h2 class="font-display text-xl">{{ brand:name }}</h2>
         {{ /if }}
 
       </div>
@@ -17,12 +17,8 @@
       <div class="text-sm">{{ footer:flair }}</div>
 
       {{ if footer:text }}
-      <div class="prose">{{ footer:text }}</div>
+      <div class="prose-white">{{ footer:text }}</div>
       {{ /if }}
-
-      <nav class="flex flex-row flex-wrap gap-x-12 gap-y-4 mr-20 mt-8">
-        {{ partial:social }}
-      </nav>
     </div>
 
     <div class="col-span-8 pb-8">
@@ -30,8 +26,17 @@
     </div>
   </div>
 
+  <nav class="flex flex-row flex-wrap items-center justify-center gap-8 w-full mt-8 fill-white">
+    {{ partial:social }}
 
-  <div class="text-sm text-center text-slate-700 mt-8">© {{ footer:copyright }}</div>
+    <a href="/feed">
+      <span class="sr-only">RSS</span>
+      {{ svg src="rss" class="fill-orange-400 hover:fill-red-600 duration-300 size-8 " }}
+    </a>
 
+  </nav>
+
+
+  <div class="text-sm text-center mt-8">{{ footer:copyright }}</div>
 
 </footer>

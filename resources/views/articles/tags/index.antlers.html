@@ -1,0 +1,11 @@
+<!-- 👋 resources/views/article/tags/index.antlers.html -->
+<h2 class="text-7xl font-bold">tags: </h2>
+
+{{ taxonomy:count in="tags" }}
+
+{{ taxonomy:tags }}
+<h2 class="text-6xl"><a href="{{ url}}">{{ title }}</a> </h2>
+
+{{ entries }}
+<a href="{{ url }}">{{ title }}</a>
+< {{ /entries }} {{ /taxonomy:tags }}

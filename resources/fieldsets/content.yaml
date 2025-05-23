@@ -9,27 +9,27 @@ fields:
         - bold
         - italic
         - strikethrough
+        - small
         - unorderedlist
         - orderedlist
         - removeformat
         - quote
+        - superscript
+        - subscript
         - anchor
+        - table
         - image
         - code
         - codeblock
         - horizontalrule
-        - alignleft
-        - aligncenter
-      toolbar_mode: floating
       reading_time: true
       word_count: true
       remove_empty_nodes: true
       type: bard
-      display: 'Long form Content'
-      instructions: 'Long form content'
+      display: Content
+      instructions: 'Content Long format user the + to add in blocks'
       container: assets
       allow_source: false
-      enable_input_rules: false
       always_show_set_button: true
       sets:
         image:
@@ -67,15 +67,9 @@ fields:
               fields:
                 -
                   import: hero
-            button:
-              display: button
-              icon: favorite-like
+            cards:
+              display: Cards
+              icon: layout-three-columns
               fields:
                 -
-                  import: button_game
-            button_code:
-              display: 'button code'
-              icon: favorite-star
-              fields:
-                -
-                  import: copy_code
+                  import: cards

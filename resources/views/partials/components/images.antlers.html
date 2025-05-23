@@ -1,16 +1,22 @@
-<section class="{{ layout_fullwidth ? 'w-full' : 'pagewidth'}} lg:p-8 ">
-  <article class="pagewidth">
-    <h2 class="text-3xl lg:text-7xl"> {{ title }}</h2>
-    <p class="text-sm text-slate-500"> {{ text }}</p>
-  </article>
+<section class="{{ section_width }} {{ section_height }} {{ section_height_lg }} {{ style:color_themes[color_theme] ?? '' }} ">
 
-  {{ if layout == "grid" }}
-  {{ partial:components/images/grid }}
-  {{ elseif layout == "flow" }}
-  {{ partial:components/images/overflow }}
-  {{ elseif layout == "gallery" }}
-  {{ partial:components/images/gallery }}
-  {{ /if }}
+  <div class="pagewidth py-4">
+
+    {{ if title or text }}
+    <article class="text-center max-w-prose mx-auto pb-4">
+      <h2 class="text-3xl lg:text-7xl"> {{ title }}</h2>
+      <div class="text-sm text-slate-500 max-w-prose"> {{ text }}</div>
+    </article>
+    {{ /if }}
 
 
+    {{ if layout == "grid" }}
+    {{ partial:components/images/grid }}
+    {{ elseif layout == "flow" }}
+    {{ partial:components/images/overflow }}
+    {{ elseif layout == "gallery" }}
+    {{ partial:components/images/gallery }}
+    {{ /if }}
+
+  </div>
 </section>

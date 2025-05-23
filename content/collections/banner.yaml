@@ -1,0 +1,16 @@
+title: banner
+template: banner/show
+layout: layout
+taxonomies:
+  - casino
+revisions: false
+route: 'banner/{slug}'
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

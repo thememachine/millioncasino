@@ -5,25 +5,8 @@ fields:
     field:
       mode: grid
       container: assets
-      dynamic: slug
       type: assets
-      display: images
-  -
-    handle: title
-    field:
-      type: text
-      display: title
-  -
-    handle: text
-    field:
-      buttons:
-        - bold
-        - italic
-        - unorderedlist
-        - orderedlist
-        - quote
-      type: markdown
-      display: text
+      display: Images
   -
     handle: layout
     field:
@@ -39,7 +22,26 @@ fields:
           value: null
       default: grid
       type: select
-      display: Layout
+      display: 'Images Layout'
       width: 50
+      instructions: 'Select a layout for the images'
   -
-    import: layout_settings
+    handle: title
+    field:
+      type: text
+      display: Title
+  -
+    handle: text
+    field:
+      buttons:
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - quote
+      type: markdown
+      display: text
+  -
+    import: layout_section
+  -
+    import: color_scheme

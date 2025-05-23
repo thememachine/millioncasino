@@ -1,0 +1,56 @@
+<!-- 👋 resources/views/articles/show.antlers.html -->
+<div class="w-full aspect-video h-96 z-0">
+  {{ if primary_image }}
+  <img src="{{ glide :src="primary_image" w="900" h="300" fit="crop_focal" }}" alt="{{ primary_image:alt }}" class="w-full h-full object-cover" loading="eager" />
+  {{ /if }}
+</div>
+
+<article class="">
+
+  <h1 class="text-9xl pagewidth">{{ title }}</h1>
+
+  {{ if teaser }}
+  <div class="text-2xl max-w-prose mx-auto my-8">
+    {{ teaser }}
+  </div>
+  {{ /if}}
+
+
+  <aside class="pagewidth">
+    <div class="w-96 bg-slate-50 border-l-8 border-orange-800 pl-4 ">
+
+      {{ if categories }}
+      <div class="text-3xl uppercase font-bold pagewidth">
+        {{ categories }}
+        <a href="/categories/{{ slug }}" class="underline py-4">{{ title }}</a>
+        {{ /categories }}
+      </div>
+      {{ /if}}
+
+      <div class="my-2 flex flex-col gap-2 text-base">
+        <time datetime="">
+          {{ date iso_format="Do MMMM YYYY" }}
+          {{ date format="H:m" }}
+        </time>
+      </div>
+
+      {{ if tags }}
+      <div class="flex flex-wrap gap-2">
+        {{ tags }}
+        <a href="{{ url }}" class="bg-sky-100 border border-sky-200 px-1 rounded-sm">{{ title }}</a> {{ url}}
+        {{ /tags }}
+      </div>
+      {{ /if }}
+    </div>
+  </aside>
+
+  {{ bard }}
+  {{ partial src="components/{type}" }}
+  {{ /bard }}
+
+</article>
+
+
+{{ partial:articles/listing limit="5" }}
+<h2 class="text-4xl py-4">Sidste</h2>
+{{ /partial:articles/listing }}

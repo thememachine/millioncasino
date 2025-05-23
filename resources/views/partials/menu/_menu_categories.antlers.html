@@ -1,0 +1,9 @@
+{{# List of all categories #}}
+<nav class="flex flex-wrap gap-4">
+
+  {{ taxonomy:categories }}
+  <a href="{{ url }}" class="hover:underline">
+    {{ title }}
+  </a>
+  {{ /taxonomy:categories }}
+</nav>

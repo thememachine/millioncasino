@@ -1,0 +1,15 @@
+<!-- 👋 resources/views/partials/list/all.antlers.html -->
+{{ collection from="posts|articles" :paginate="paginate" as="posts" }}
+
+{{ if no_results }}
+Ingen Post
+{{ /if }}
+
+{{ posts }}
+{{ title }} {{ url}} <br>
+{{ /posts }}
+
+
+{{ partial:paginate }}
+
+{{ /collection }}

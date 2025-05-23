@@ -1,6 +1,58 @@
 title: Cards
 fields:
   -
+    handle: entries
+    field:
+      create: false
+      type: entries
+      display: entries
+  -
+    handle: columns_info
+    field:
+      type: section
+      display: Columns
+      instructions: 'Choose the amount of cards in a row for mobile and desktop devices'
+  -
+    handle: columns_mobile
+    field:
+      options:
+        -
+          key: grid-cols-1
+          value: '1'
+        -
+          key: grid-cols-2
+          value: '2'
+        -
+          key: grid-cols-3
+          value: '3'
+        -
+          key: grid-cols-4
+          value: '4'
+      default: '4'
+      type: button_group
+      display: 'Columns Mobile'
+      width: 50
+  -
+    handle: columns
+    field:
+      options:
+        -
+          key: 'lg:grid-cols-2'
+          value: '2'
+        -
+          key: 'lg:grid-cols-3'
+          value: '3'
+        -
+          key: 'lg:grid-cols-4'
+          value: '4'
+        -
+          key: 'lg:grid-cols-5'
+          value: '5'
+      default: '4'
+      type: button_group
+      display: 'Columns Desktop'
+      width: 50
+  -
     handle: title
     field:
       type: text
@@ -19,53 +71,6 @@ fields:
         - table
         - asset
       type: markdown
-      display: text
+      display: Text
   -
-    handle: entries
-    field:
-      create: false
-      type: entries
-      display: entries
-      width: 66
-  -
-    handle: columns_mobile
-    field:
-      options:
-        -
-          key: 1
-          value: null
-        -
-          key: 2
-          value: null
-        -
-          key: 3
-          value: null
-        -
-          key: 4
-          value: null
-      default: '4'
-      type: button_group
-      display: 'columns mobile'
-      width: 50
-  -
-    handle: columns
-    field:
-      options:
-        -
-          key: 2
-          value: null
-        -
-          key: 3
-          value: null
-        -
-          key: 4
-          value: null
-        -
-          key: 5
-          value: null
-      default: '4'
-      type: button_group
-      display: columns
-      width: 33
-  -
-    import: layout_settings
+    import: layout_section

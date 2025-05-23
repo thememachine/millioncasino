@@ -1,7 +1,8 @@
-title: tags
+title: Tags
 preview_targets:
   -
     label: Term
     url: '{permalink}'
     refresh: true
+template: tags/show
 layout: layout

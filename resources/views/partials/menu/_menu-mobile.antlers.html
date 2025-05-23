@@ -1,17 +1,20 @@
 <nav x-cloak x-show="openmenu" @click.outside="openmenu = false" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="-translate-x-full"
   x-transition:enter-end="translate-x-0" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="translate-x-0" x-transition:leave-end="-translate-x-full"
-  class="md:hidden fixed z-50 left-0 top-12 w-full h-full bg-black/90 shadow-xl" aria-label="Mobile Menu">
+  class="lg:hidden fixed z-50 left-0 top-12 w-full h-[calc(100vh-3rem)] flex flex-col justify-between bg-white/90 backdrop-blur-lg shadow-xl" aria-label="Mobile Menu">
 
+  <div class="">
+    {{ nav:main include_home="false" }}
 
-  {{ nav:main include_home="false" }}
+    <a href="{{ url }}" class="text-3xl px-2 py-4 uppercase block text-sky-600 border-b border-sky-400 {{ if is_current || is_parent }} font-bold {{ /if }}">
+      {{ title }}
+    </a>
 
-  <a href="{{ url }}" class="p-2 block text-sky-600 {{ if is_current || is_parent }} font-bold {{ /if }}">
-    {{ title }}
-  </a>
+    {{ /nav:main  }}
+  </div>
 
-  {{ /nav:main  }}
-
-  {{ partial:social }}
+  <div class="flex flex-row items-center justify-center gap-8 pt-8">
+    {{ partial:social }}
+  </div>
 
 
 </nav>

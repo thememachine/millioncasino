@@ -1,0 +1,48 @@
+title: Buttons
+fields:
+  -
+    handle: cta
+    field:
+      type: replicator
+      display: Buttons
+      collapse: true
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            icon_button:
+              display: 'Icon Button'
+              fields:
+                -
+                  handle: button_title
+                  field:
+                    type: text
+                    display: Title
+                -
+                  handle: button_link
+                  field:
+                    type: link
+                    display: Link
+                -
+                  handle: button_style
+                  field:
+                    options:
+                      -
+                        key: primary
+                        value: Primary
+                      -
+                        key: secondary
+                        value: Secondary
+                      -
+                        key: link
+                        value: Link
+                    type: button_group
+                    display: style
+                    width: 50
+                    default: primary
+                -
+                  handle: button_icon
+                  field:
+                    type: icon
+                    display: icon
+                    width: 50

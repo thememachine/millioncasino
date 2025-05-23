@@ -1,4 +1,4 @@
-title: category
+title: Category
 tabs:
   main:
     display: Main
@@ -13,7 +13,15 @@ tabs:
               validate:
                 - required
           -
-            import: teaser_and_image
+            import: primary_image
+  card:
+    display: Card
+    sections:
+      -
+        display: 'New Section'
+        fields:
+          -
+            import: card
   sidebar:
     display: Sidebar
     sections:

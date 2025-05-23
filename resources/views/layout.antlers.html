@@ -9,6 +9,7 @@
     {{ partial:header/seo }}
     {{ partial:header/verification }}
     {{ feedamic }}
+    {{ settings:header_scipts }}
     {{ vite src="resources/js/site.js|resources/css/site.css" }}
   </head>
 
@@ -16,11 +17,13 @@
 
     {{ partial:header }}
 
-    <main id="main" tabindex="-1" class="flex flex-col flex-grow focus-visible:outline-0 lg:mt-0 mt-20">
+    <main id="main" tabindex="-1" class="flex flex-col flex-grow focus-visible:outline-0 lg:mt-0 mt-12">
       {{ template_content }}
     </main>
 
     {{ partial:footer }}
+
+    {{ settings:footer_script }}
   </body>
 
 </html>

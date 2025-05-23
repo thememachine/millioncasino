@@ -1,26 +1,30 @@
-<h1 class="text-7xl font-bold mb-4 text-slate-700">
-  Kategori : {{ title }}
-</h1>
+<!-- 👋 resources/views/categories/show.antlers.html -->
 
-<img src="{{ glide :src="primary_image" w="900" h="600" fit="crop_focal" }} " alt="{{ primary_image:alt }}" class="">
+<section class="pagewidth">
+  cat
+  c <h2 class="text-7xl font-bold mb-4 text-slate-700">
+    {{ title }}
+  </h2>
 
-<div class="prose">{{ teaser }} </div>
+  {{ if primary_image}}
+  <img src="{{ glide :src="primary_image" w="900" h="600" fit="crop_focal" }} " alt="{{ primary_image:alt }}" class="">
+  {{ /if }}
+
+  {{ if teaser_card }}
+  <div class="prose-xl">{{ teaser_card }}</div>
+  {{ /if }}
 
 
-{{ entries paginate="8" }}
-<section class="pagewidth grid grid-cols-4 gap-4">
-  {{ results }}
-  {{ partial:cards/card }}
-  {{ /results }}
+
+  {{ entries paginate="8" }}
+  <section class="pagewidth grid grid-cols-1 lg:grid-cols-4 gap-2 lg:gap-4">
+    {{ results }}
+    {{ partial:cards/card }}
+    {{ /results }}
+  </section>
+
+  {{ partial:paginate }}
+
+  {{ /entries }}
 
 </section>
-
-{{ partial:paginate }}
-
-{{ /entries }}
-
-
-
-
-
-{{ partial:categories }}

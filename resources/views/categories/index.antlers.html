@@ -1,23 +1,26 @@
+<!-- 👋 resources/views/categories/index.antlers.html -->
+wtf?
 <section class="pagewidth">
 
-  <h1 class="text-7xl font-bold">Kategories list</h1>
+  <h2 class="text-7xl font-bold">Kategories list</h2>
 
-  {{ partial:categories }}
+  {{ partial:menu/menu_categories }}
 
-</section>
+  <div class="pagewidth grid grid-cols-1 lg:grid-cols-4 gap-4">
 
-<section class="pagewidth grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-  {{ taxonomy:categories }}
+    {{ taxonomy:categories }}
 
-  <article>
-    {{ partial:cards/card hide_date="true" }}
+    <article>
+      {{ partial:cards/card hide_date="true" }}
 
-    list:
-    {{ entries }}
-    {{ title}}
-    {{ /entries }}
-  </article>
+      <div class="flex-col gap-2 hidden">
+        {{ entries }}
+        <div><a href="{{ url }}" class="hover:underline">{{ title}}</a></div>
+        {{ /entries }}
+      </div>
+    </article>
 
+    {{ /taxonomy:categories }}
+  </div>
 
-  {{ /taxonomy:categories }}
 </section>

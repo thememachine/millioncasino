@@ -1,0 +1,24 @@
+title: 'Content Markdown'
+fields:
+  -
+    handle: markdown
+    field:
+      container: assets
+      buttons:
+        - bold
+        - italic
+        - asset
+        - link
+        - quote
+        - strikethrough
+        - unorderedlist
+        - orderedlist
+        - table
+        - image
+        - code
+        - codeblock
+      automatic_links: true
+      heading_anchors: true
+      table_of_contents: true
+      type: markdown
+      display: markdown

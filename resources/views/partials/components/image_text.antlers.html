@@ -1,0 +1,36 @@
+<!-- 👋 resources/views/partials/components/image_text.antlers.html -->
+
+<section class="{{ section_width }} {{ section_height }} {{ section_height_lg }} {{ style:color_themes[color_theme] ?? 'bg-red-300' }} ">
+  <div class="flex h-full {{ if layout:image_placement }}  flex-col  lg:flex-row-reverse {{else }} flex-col lg:flex-row {{/if}} gap-4 ">
+
+    <div class="aspect-video w-full lg:w-1/2">
+      {{ if image }}
+      <img src="{{ glide :src="image" w="1200" h="300" fit="crop_focal" }} " alt="{{ url:alt }}" class="object-cover w-full h-full">
+      {{ /if }}
+    </div>
+
+    <article class="aspect-video flex flex-col {{ layout:horizontal }} {{ layout:vertical }} w-full lg:w-1/2 p-4">
+
+      <h2 class="font-display text-8xl font-bold text-amber-800">
+        {{ title }}
+      </h2>
+
+      <div class="prose-xl">
+        {{ text }}
+      </div>
+
+      <div class="flex gap-4">
+
+
+        {{ cta }}
+        {{ partial:buttons/button }}
+        {{ /cta}}
+      </div>
+
+    </article>
+
+
+
+
+  </div>
+</section>

@@ -13,11 +13,15 @@ tabs:
             handle: logo
             field:
               max_files: 1
-              container: sitesettings
+              container: site
               type: assets
               display: Logo
               mode: grid
               width: 33
+              show_filename: false
+              show_set_alt: false
+              validate:
+                - 'mimes:png,jpg,webp,gif'
           -
             handle: slogan
             field:
@@ -28,37 +32,69 @@ tabs:
               display: Slogan
               width: 66
           -
+            handle: opengraph_default
+            field:
+              type: section
+              display: 'Opengraph Default Settings'
+          -
             handle: opengraph_image
             field:
               max_files: 1
-              mode: grid
-              container: sitesettings
+              container: site
               type: assets
               display: 'Open Graph Image'
               width: 33
+              mode: grid
+              show_filename: false
+              show_set_alt: false
+              validate:
+                - 'mimes:png,jpg,webp,gif'
+          -
+            handle: opengraph_description
+            field:
+              character_limit: 160
+              type: textarea
+              display: 'Opengraph Description'
+              width: 66
+          -
+            handle: bookmark_graphic
+            field:
+              type: section
+              display: 'Bookmark Graphic'
+              instructions: 'Logos for bookmarks'
           -
             handle: icon_svg
             field:
               max_files: 1
-              container: sitesettings
+              container: site
               type: assets
               display: 'icon svg'
               width: 33
               mode: grid
+              show_set_alt: false
+              validate:
+                - 'mimes:svg'
           -
             handle: apple_touch_icon
             field:
               max_files: 1
               mode: grid
-              container: sitesettings
+              container: site
               type: assets
               display: 'apple touch icon'
               width: 33
+              show_filename: false
+              show_set_alt: false
           -
-            handle: ico_icon
+            handle: icon_ico
             field:
               max_files: 1
-              container: sitesettings
+              container: site
               type: assets
-              display: 'ico icon'
-              width: 50
+              display: 'Icon Ico'
+              width: 33
+              show_set_alt: false
+              validate:
+                - 'mimes:ico'
+      -
+        display: 'New Section'

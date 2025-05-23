@@ -1,0 +1,60 @@
+title: 'Color Scheme'
+fields:
+  -
+    handle: color_theme
+    field:
+      options:
+        -
+          key: tone
+          value: Tone
+        -
+          key: tone-lightest
+          value: 'Tone Lightest'
+        -
+          key: tone-light
+          value: 'Tone Light'
+        -
+          key: tone-dark
+          value: 'Tone Dark'
+        -
+          key: tone-darkest
+          value: 'Tone Darkest'
+        -
+          key: primary
+          value: primary
+        -
+          key: primary-lightest
+          value: 'primary Lightest'
+        -
+          key: primary-light
+          value: 'primary Light'
+        -
+          key: primary-dark
+          value: 'primary Dark'
+        -
+          key: primary-darkest
+          value: 'Tone Darkest'
+        -
+          key: secondary
+          value: secondary
+        -
+          key: secondary-lightest
+          value: 'secondary Lightest'
+        -
+          key: secondary-light
+          value: 'secondary Light'
+        -
+          key: secondary-dark
+          value: 'secondary Dark'
+        -
+          key: secondary-darkest
+          value: 'secondary Darkest'
+        -
+          key: transparent
+          value: transparent
+      clearable: true
+      type: select
+      display: 'color theme'
+      width: 50
+      instructions: 'Color schemes can be edited in global/colorschemes'
+      instructions_position: below
