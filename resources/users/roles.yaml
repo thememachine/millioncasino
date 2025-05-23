@@ -1,4 +1,30 @@
-# admin:
-#   title: Administrator
-#   permissions:
-#     - super
+editor:
+  title: editor
+  permissions:
+    - 'access cp'
+    - 'view casino entries'
+    - 'edit casino entries'
+    - 'create casino entries'
+    - 'delete casino entries'
+    - 'publish casino entries'
+    - 'reorder casino entries'
+    - 'edit other authors casino entries'
+    - 'publish other authors casino entries'
+    - 'delete other authors casino entries'
+    - 'view spil entries'
+    - 'edit spil entries'
+    - 'create spil entries'
+    - 'delete spil entries'
+    - 'publish spil entries'
+    - 'reorder spil entries'
+    - 'edit other authors spil entries'
+    - 'publish other authors spil entries'
+    - 'delete other authors spil entries'
+    - 'configure taxonomies'
+    - 'view categories terms'
+    - 'edit categories terms'
+    - 'create categories terms'
+    - 'delete categories terms'
+    - 'view tags terms'
+    - 'edit tags terms'
+    - 'create tags terms'
