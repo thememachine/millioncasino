@@ -15,20 +15,6 @@ preferences:
         - tags
     pages:
       after_save: continue_editing
-  nav:
-    content:
-      reorder:
-        - 'content::collections'
-        - 'content::collections::pages'
-        - 'content::collections::spil'
-        - 'content::collections::casino'
-        - 'content::collections::blog'
-      items:
-        'content::collections::pages': '@move'
-        'content::collections::spil': '@move'
-        'content::collections::casino': '@move'
-        'content::collections::blog': '@move'
-        'content::collections::regler': '@move'
   forms:
     contact:
       columns:
