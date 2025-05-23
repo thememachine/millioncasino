@@ -1,0 +1,7 @@
+nav:
+  content:
+    reorder:
+      - 'content::collections::casino'
+    items:
+      'content::collections::casino': '@move'
+      'content::collections::spil': '@move'
