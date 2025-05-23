@@ -7,14 +7,14 @@ author: aef29f6b-ac12-4f4d-8668-ef2c762a6500
 assets_field:
   - 1987.png
 updated_by: aef29f6b-ac12-4f4d-8668-ef2c762a6500
-updated_at: 1748018761
+updated_at: 1748018777
 blocks:
   -
     id: mb117x18
     primary: 0e769849-fdb7-4deb-b254-6d7eabc29ac8
     secondary:
-      - bd7ed42b-2dc1-4369-aef1-3d19de6094b2
       - 0e769849-fdb7-4deb-b254-6d7eabc29ac8
+      - bd7ed42b-2dc1-4369-aef1-3d19de6094b2
     type: hero_box
     enabled: true
 ---
