@@ -13,8 +13,6 @@ tabs:
               validate:
                 - required
           -
-            import: primary_image
-          -
             import: content_markdown
   sidebar:
     display: Sidebar
@@ -32,6 +30,8 @@ tabs:
               max_items: 1
               validate:
                 - required
+          -
+            import: primary_image
           -
             handle: author
             field:
@@ -52,3 +52,8 @@ tabs:
               type: template
               display: Template
               localizable: true
+  new_tab:
+    display: 'New Tab'
+    sections:
+      -
+        display: 'New Section'

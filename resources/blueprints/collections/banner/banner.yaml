@@ -1,4 +1,4 @@
-title: banner
+title: Banner
 tabs:
   main:
     display: Main
@@ -15,22 +15,27 @@ tabs:
           -
             import: content_markdown
           -
-            handle: html
-            field:
-              type: textarea
-              display: html
-          -
             import: buttons
           -
             handle: terms
             field:
-              type: textarea
-              display: terms
+              buttons:
+                - bold
+                - italic
+                - link
+                - image
+                - table
+                - strikethrough
+                - asset
+              type: markdown
+              display: Terms
   sidebar:
     display: Sidebar
     sections:
       -
         fields:
+          -
+            import: primary_image
           -
             handle: casino
             field:
@@ -42,8 +47,6 @@ tabs:
               max_items: 1
               validate:
                 - required
-          -
-            import: primary_image
           -
             handle: date
             field:

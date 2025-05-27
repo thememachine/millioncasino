@@ -23,6 +23,11 @@ nav:
         icon: book-pages
       'content::navigation::main': '@move'
       'content::navigation::footer': '@move'
+      'content::taxonomies':
+        action: '@modify'
+        reorder:
+          - 'content::taxonomies::casino'
+          - 'content::taxonomies::categories'
   tools:
     reorder:
       - 'tools::utilities::git'
