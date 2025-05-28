@@ -2,7 +2,7 @@
   "workbench.colorCustomizations": {
     "activityBar.activeBorder": "#FFFFFF",
     "sideBar.foreground": "#FFFFFF",
-    "sideBarSectionHeader.background": "#003366",
+    "sideBarSectionHeader.background": "#FF00FF",
     "sideBarSectionHeader.foreground": "#FFFFFF",
     "tab.activeBackground": "#5b005b",
     "tab.activeForeground": "#FFFFFF",

@@ -5,52 +5,58 @@
   {{ /if }}
 </div>
 
-<article class="">
-
-  <h1 class="text-9xl pagewidth">{{ title }}</h1>
-
-  {{ if teaser }}
-  <div class="text-2xl max-w-prose mx-auto my-8">
-    {{ teaser }}
-  </div>
-  {{ /if}}
+<article class="lg:grid lg:grid-cols-4 gap-2 pagewidth">
+  <div class="col-span-3">
 
 
-  <aside class="pagewidth">
-    <div class="w-96 bg-slate-50 border-l-8 border-orange-800 pl-4 ">
 
-      {{ if categories }}
-      <div class="text-3xl uppercase font-bold pagewidth">
-        {{ categories }}
-        <a href="/categories/{{ slug }}" class="underline py-4">{{ title }}</a>
-        {{ /categories }}
-      </div>
-      {{ /if}}
+    <h1 class="text-9xl pagewidth">{{ title }}</h1>
 
-      <div class="my-2 flex flex-col gap-2 text-base">
-        <time datetime="">
-          {{ date iso_format="Do MMMM YYYY" }}
-          {{ date format="H:m" }}
-        </time>
-      </div>
-
-      {{ if tags }}
-      <div class="flex flex-wrap gap-2">
-        {{ tags }}
-        <a href="{{ url }}" class="bg-sky-100 border border-sky-200 px-1 rounded-sm">{{ title }}</a> {{ url}}
-        {{ /tags }}
-      </div>
-      {{ /if }}
+    {{ if teaser }}
+    <div class="text-2xl max-w-prose mx-auto my-8">
+      {{ teaser }}
     </div>
-  </aside>
-
-  {{ bard }}
-  {{ partial src="components/{type}" }}
-  {{ /bard }}
-
-</article>
+    {{ /if}}
 
 
-{{ partial:articles/listing limit="5" }}
-<h2 class="text-4xl py-4">Sidste</h2>
-{{ /partial:articles/listing }}
+    <aside class="pagewidth">
+      <div class="w-96 bg-slate-50 border-l-8 border-orange-800 pl-4 ">
+
+        {{ if categories }}
+        <div class="text-3xl uppercase font-bold pagewidth">
+          {{ categories }}
+          <a href="/categories/{{ slug }}" class="underline py-4">{{ title }}</a>
+          {{ /categories }}
+        </div>
+        {{ /if}}
+
+        <div class="my-2 flex flex-col gap-2 text-base">
+          <time datetime="">
+            {{ date iso_format="Do MMMM YYYY" }}
+            {{ date format="H:m" }}
+          </time>
+        </div>
+
+        {{ if tags }}
+        <div class="flex flex-wrap gap-2">
+          {{ tags }}
+          <a href="{{ url }}" class="bg-sky-100 border border-sky-200 px-1 rounded-sm">{{ title }}</a> {{ url}}
+          {{ /tags }}
+        </div>
+        {{ /if }}
+      </div>
+    </aside>
+
+    {{ bard }}
+    {{ partial src="components/{type}" }}
+    {{ /bard }}
+
+  </div>
+  <div class="col-span-1">
+
+    {{ collection:articles :limit="10" }}
+    <a href="{{ url }}"> {{ title }}</a>
+    {{ /collection:articles }}
+
+  </div>
+  <article

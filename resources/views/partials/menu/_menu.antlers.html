@@ -4,7 +4,7 @@
     {{ nav:main include_home="false" }}
 
     <a href="{{ url }}"
-      class="p-2 border-b-4 text-sky-600 flex items-center hover:border-sky-400 transition-all duration-300 {{ if is_current || is_parent }} font-bold border-red-500 {{ else }} border-transparent {{ /if }}">
+      class="p-2 border-b-4 text-white uppercase text-xl flex items-center hover:border-green-200 transition-all duration-300 {{ if is_current || is_parent }} font-bold border-green-200 {{ else }} border-transparent {{ /if }}">
       {{ title }}
     </a>
 
@@ -14,12 +14,5 @@
   {{ partial:menu/menu_casino }}
   {{ partial:menu/menu_categories }}
 
-  <form action="/search/" class="h-full flex items-center ">
-    <div class="bg-white flex flex-row gap-2 items-center px-2 border border-slate-300 rounded-md ">
-      <label for="search">{{ svg src="telescope" class="size-4" }}</label>
-      <input type="seach" id="search" name="q" placeholder="" class="p-1 bg-white">
-    </div>
-
-  </form>
 
 </div>

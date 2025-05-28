@@ -1,0 +1,14 @@
+<!-- 👋 resources/views/articles/_listing.antlers.html -->
+<section class="pagewidth py-4">
+  {{ slot }}
+
+  <div class="">
+
+    {{ collection:articles :limit="limit" }}
+
+    {{ title }}
+    {{ url }}
+
+    {{ /collection:articles }}
+  </div>
+</section>

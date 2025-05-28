@@ -1,11 +1,44 @@
 <!-- 👋 resources/views/home.antlers.html -->
 
-{{# PAgebuild stuff #}}
-{{ blocks }}
-{{ partial src="components/{type}" }}
-{{ /blocks }}
+<div class="lg:grid lg:grid-cols-4 gap-2 pagewidth">
+  <div class="col-span-3">
+
+    {{# PAgebuild stuff #}}
+    {{ blocks }}
+    {{ partial src="components/{type}" }}
+    {{ /blocks }}
 
 
-{{ bard }}
-{{ partial src="components/{type}" }}
-{{ /bard }}
+    {{ bard }}
+    {{ partial src="components/{type}" }}
+    {{ /bard }}
+  </div>
+  <div class="col-span-1 flex flex-col gap-2">
+
+    <article class="bg-white p-4 text-black flex flex-col gap-2">
+      {{ collection:casinos :limit="10" }}
+      <div class="border-b border-gray-300">
+        <a href="{{ url }}"> {{ title }}</a>
+      </div>
+      {{ /collection:casinos }}
+    </article>
+
+    <article class="bg-white p-4 text-black flex flex-col gap-2">
+      {{ collection:posts :limit="10" }}
+      <div class="border-b border-gray-300">
+        <a href="{{ url }}"> {{ title }}</a>
+      </div>
+      {{ /collection:posts }}
+    </article>
+
+    <article class="bg-white p-4 text-black flex flex-col gap-2">
+      {{ collection:articles :limit="10" }}
+      <div class="border-b border-gray-300">
+        <a href="{{ url }}"> {{ title }}</a>
+      </div>
+      {{ /collection:articles }}
+    </article>
+
+
+  </div>
+</div>
