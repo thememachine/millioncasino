@@ -60,17 +60,22 @@ return [
     ],
     [
       'type' => 'collection_count',
+      'collection' => 'casino',
+      'width' => '25'
+    ],
+    [
+      'type' => 'collection_count',
+      'collection' => 'banner',
+      'width' => '25'
+    ],
+    [
+      'type' => 'collection_count',
       'collection' => 'posts',
       'width' => '25'
     ],
     [
       'type' => 'collection_count',
       'collection' => 'articles',
-      'width' => '25'
-    ],
-    [
-      'type' => 'collection_count',
-      'collection' => 'program',
       'width' => '25'
     ],
     [
@@ -90,21 +95,20 @@ return [
       'width' => '25'
     ],
     [
-      'type' => 'collection_count',
-      'collection' => 'program',
-      'width' => '25'
-    ],
-
-
-    [
       'type' => 'collection',
-      'collection' => 'articles',
+      'collection' => 'casinos',
       'limit' => 10,
       'width' => '50'
     ],
     [
       'type' => 'collection',
-      'collection' => 'program',
+      'collection' => 'banner',
+      'limit' => 10,
+      'width' => '50'
+    ],
+    [
+      'type' => 'collection',
+      'collection' => 'articles',
       'limit' => 10,
       'width' => '50'
     ],

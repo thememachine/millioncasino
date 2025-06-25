@@ -1,21 +1,40 @@
 <!-- 👋 resources/views/casinos/casino.antlers.html -->
 <h1 class="text-6xl pagewidth text-white my-8">{{ title }}</h1>
 
-{{ if primary_image }}
-<div class="w-96  aspect-video z-0">
-  <img src="{{ glide :src="primary_image" w="900" h="300" fit="crop_focal" }}" alt="{{ primary_image:alt }}" class="w-full h-full object-cover" loading="eager" />
+
+
+<div class="flex flex-row gap-4 pagewidth">
+
+
+  <section class="grid grid-cols-2 gap-4 pagewidth col-span-3 w-10/12">
+    {{# Get the chosen casinos value #}}
+    {{ casino }}
+    {{ casino_value = slug }}
+    {{ /casino}}
+
+    {{# list all banners that have the same tag #}}
+    {{ collection:banner casino:is="{ casino_value }" }}
+    {{ partial:banners/banner}}
+    {{ /collection:banner }}
+  </section>
+
+
+  <aside class="bg-white p-1 text-black flex flex-col gap-2 w-2/12">
+
+    {{ if primary_image }}
+    <div class="w-96 aspect-video z-0">
+      <img src="{{ glide :src="primary_image" w="900" h="300" fit="crop_focal" }}" alt="{{ primary_image:alt }}" class="w-full h-full object-cover" loading="eager" />
+    </div>
+    {{ /if }}
+
+    {{ collection:casinos :limit="10" }}
+    <div class="border-b border-gray-300">
+      <a href="{{ url }}"> {{ title }}</a>
+    </div>
+    {{ /collection:casinos }}
+  </aside>
+
+
+
+
 </div>
-{{ /if }}
-
-<section class="grid grid-cols-2 gap-4 pagewidth">
-  {{# Get the chosen casinos value #}}
-  {{ casino }}
-  {{ casino_value = slug }}
-  {{ /casino}}
-
-  {{# list all banners that have the same tag #}}
-  {{ collection:banner casino:is="{ casino_value }" }}
-  {{ partial:banners/banner}}
-  {{ /collection:banner }}
-
-</section>

@@ -1,7 +1,8 @@
 name: mortendk
 super: true
+avatar: 9-16.jpg
 id: aef29f6b-ac12-4f4d-8668-ef2c762a6500
-password_hash: $2y$12$fSAEGCg3T/6kOQ1Zd0JODO5eN7yLVoYD/MD/qEqlmrqIgZykP0kl2
+password_hash: $2y$12$8RvGgb86FszjqBKX0vNbo.hMISEw5uLUEw2zLqkycdplfii0rwGIS
 preferences:
   collections:
     blog:

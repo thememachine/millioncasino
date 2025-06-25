@@ -2,32 +2,44 @@ nav:
   content:
     reorder:
       - 'content::collections'
-      - 'content::collections::banner'
       - 'content::collections::casinos'
-      - 'content::collections::posts'
+      - 'content::collections::banner'
       - 'content::collections::articles'
+      - 'content::collections::posts'
       - 'content::collections::pages'
       - 'content::navigation'
       - 'content::navigation::main'
+      - 'content::navigation::footer'
+      - 'content::taxonomies'
+      - 'content::taxonomies::casino'
+      - 'content::taxonomies::categories'
     items:
-      'content::collections::banner': '@move'
-      'content::collections::casinos': '@move'
-      'content::collections::posts':
+      'content::collections':
+        display: 'Collections :'
+        action: '@modify'
+      'content::collections::casinos':
         action: '@move'
-        icon: entries
+        icon: collections
+      'content::collections::banner':
+        action: '@move'
+        icon: fieldtype
       'content::collections::articles':
         action: '@move'
         icon: book-open
+      'content::collections::posts':
+        action: '@move'
+        icon: entries
       'content::collections::pages':
         action: '@move'
         icon: book-pages
       'content::navigation::main': '@move'
       'content::navigation::footer': '@move'
       'content::taxonomies':
+        display: 'Taxonomies :'
         action: '@modify'
-        reorder:
-          - 'content::taxonomies::casino'
-          - 'content::taxonomies::categories'
+      'content::taxonomies::casino': '@move'
+      'content::taxonomies::categories': '@move'
+      'content::taxonomies::tags': '@move'
   tools:
     reorder:
       - 'tools::utilities::git'
