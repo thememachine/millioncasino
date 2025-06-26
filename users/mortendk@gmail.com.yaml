@@ -22,6 +22,13 @@ preferences:
         - primary_image
         - casino
         - status
+    articles:
+      columns:
+        - title
+        - categories
+        - slug
+        - status
+      after_save: continue_editing
   forms:
     contact:
       columns:

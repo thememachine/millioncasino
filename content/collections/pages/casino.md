@@ -4,15 +4,26 @@ blueprint: page
 title: Casino
 author: aef29f6b-ac12-4f4d-8668-ef2c762a6500
 updated_by: aef29f6b-ac12-4f4d-8668-ef2c762a6500
-updated_at: 1748038799
-bard:
-  -
-    type: paragraph
-    content:
-      -
-        type: text
-        text: 'Dette er en side til casinoerne'
+updated_at: 1750929364
 blocks:
+  -
+    id: mccaymxl
+    title: 'Casino sider - find de bedste danske online casinospil'
+    text: |-
+      Siden 2000 har Casinopenge.dk givet dig det ultimative overblik over danske casino sider og online casino i Danmark. Vi guider dig til de største bonusser og Free Spins på en række af de største online spillesider som Spilnu, Mr Green og Royal Casino.
+
+      Nogle casinoer tilbyder mere end én bonus - hvis du klikker på anmeldelsen af et internet casino i Danmark, kan du se alle tilbud. Alle casinoer er godkendt af den danske spillemyndighed.
+
+      Læs mere
+    layout:
+      image_placement: true
+      vertical: justify-center
+      horizontal: items-center
+    section_width: pagewidth
+    section_height_lg: 'lg:h-auto'
+    section_height: h-auto
+    type: image_text
+    enabled: true
   -
     id: mb18okgi
     entries:
@@ -25,6 +36,4 @@ blocks:
     section_height: h-auto
     type: cards
     enabled: true
-    title: Casinos
-    text: 'casino text'
 ---

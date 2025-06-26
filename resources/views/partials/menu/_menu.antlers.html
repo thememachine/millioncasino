@@ -1,4 +1,4 @@
-<div class="hidden lg:flex h-full w-full justify-between items-center">
+<div class="hidden lg:flex h-full w-full justify-between items-center border-b border-green-800">
 
   <nav class="flex gap-8 h-full" aria-label="Main Menu">
     {{ nav:main include_home="false" }}
@@ -10,9 +10,9 @@
 
     {{ /nav:main  }}
   </nav>
-
+  {{#
   {{ partial:menu/menu_casino }}
   {{ partial:menu/menu_categories }}
-
+  #}}
 
 </div>

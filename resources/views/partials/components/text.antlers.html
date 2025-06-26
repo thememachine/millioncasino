@@ -1,8 +1,64 @@
-<!-- 👋 resources/views/partials/components/text.antlers.html -->
-<div class="pagewidth py-4">
+{{#
+  https://github.com/tailwindlabs/tailwindcss-typography
+#}}
 
-  <div class="mx-auto max-w-prose prose-xl">
+<!-- 👋 resources/views/partials/components/text.antlers.html -->
+<div class="pagewidth pb-4">
+  <div class="mx-auto max-w-prose
+    prose prose-xl
+    prose-headings:text-green-100
+    prose-headings:font-bold
+    prose-headings:mt-4
+    prose-h1:my-8
+    prose-h1:lg:text-5xl
+    prose-h2:lg:text-4xl
+    prose-h2:mt-8 prose-h2:mb-4
+    prose-h3:lg:text-3xl
+    prose-h4:text-xl prose-h4:lg:font-bold
+    prose-h5:text-xl prose-h5:lg:font-bold
+    prose-h6:text-xl prose-h6:lg:font-bold
+
+    prose-p:text-white
+
+    prose-a:text-green-400
+    prose-a:underline-offset-2
+    hover:prose-a:underline-offset-4
+    hover:prose-a:text-green-700
+
+    prose-strong:text-white
+
+    prose-img:w-full
+    prose-img:mb-4
+
+    prose-hr:border-red-400
+    prose-hr:border-dashed
+
+    prose-li:text-green-400
+
+    prose-table:bg-green-700
+    prose-td:px-2
+    prose-td:py-2
+    prose-tr:border-green-200
+
+
+
+    prose-blockquote:lg:text-3xl
+    prose-blockquote:font-normal
+    prose-blockquote:not-italic
+    prose-blockquote:text-green-300
+    prose-blockquote:bg-white/30
+    prose-blockquote:p-4
+
+    prose-code:font-normal
+    prose-code:bg-white
+    prose-code:text-gray-900
+    prose-code:px-2
+
+    prose-pre:bg-gray-50
+    prose-pre:text-gray-800
+    prose-pre:selection:bg-gray-300
+    prose-pre:selection:text-green-800;
+  ">
     {{ text }}
   </div>
-
 </div>

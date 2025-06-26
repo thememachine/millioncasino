@@ -29,7 +29,6 @@ fields:
       display: Content
       instructions: 'Content Long format user the + to add in blocks'
       container: assets
-      allow_source: false
       always_show_set_button: true
       sets:
         image:

@@ -2,6 +2,14 @@ tree:
   -
     id: c2dc8f01-6346-4fe6-83b0-2e2d8ce89fe3
     entry: home
+    title: 'Millionær Casino'
   -
     id: e803c7c2-ad4c-4a53-8d45-000daa290f8e
     entry: c5d1de1b-98e8-44f0-aa2a-59d918c91e14
+    title: Casinoer
+  -
+    id: 7b285576-21bd-4315-a862-cb75f413b2be
+    entry: 9c36b13c-5981-42e7-826a-1aa86518932a
+  -
+    id: e70616a8-4fce-4860-aae0-3a012de9ebc2
+    entry: 1cc52e57-3dac-477d-81e0-abb917c40081

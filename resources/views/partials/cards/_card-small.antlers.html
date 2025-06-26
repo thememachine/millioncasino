@@ -1,41 +1,23 @@
-<article class="bg-white border border-slate-200 rounded-lg shadow-lg">
+<a href="{{ url }}">
+  <article class="rounded-sm  bg-green-800 text-white shadow-md flex flex-row gap-2">
 
-  {{ if image_card or primary_image }}
-  <a href="{{ url }}" class="">
-    <div class="w-full aspect-video">
-      <img src="{{ glide :src="image_card ?? primary_image" w="400" h="200" fit="crop_focal" }}" alt="{{ image_card:alt ?? primary_image:alt }}"
-        class="aspect-video w-full h-full object-cover rounded-t-lg" loading="lazy" />
+    <div class="w-20 h-20 aspect-square">
+      {{ if image_card or primary_image }}
+      <img src="{{ glide :src="image_card ?? primary_image" w="200" h="200" fit="crop_focal" }}" alt="{{ image_card:alt ?? primary_image:alt }}"
+        class="aspect-video w-full h-full object-cover rounded-l-md" loading="lazy" />
+      {{ else }}
+      <div class="bg-red-700 w-full aspect-square text-sm flex items-center justify-center">x</div>
+      {{ /if }}
     </div>
-  </a>
-  {{ else }}
-  <a href="{{ url }}">
-    <div class="w-full aspect-video">
-      <div class="bg-slate-200 hover:bg-slate-300 transition-all w-full aspect-video text-sm flex items-center justify-center">img missing</div>
-    </div>
-  </a>
-  {{ /if }}
 
-  <div class="p-2">
-    <a href="{{ url }}" class="">
-      <h2 class="text-2xl font-bold">
+    <div class="p-2">
+      <h2 class="font-bold text-green-200">
         {{ title_card or title }}
       </h2>
-    </a>
 
-    {{ if teaser_card }}
-    <div class="">{{ teaser_card }}</div>
-    {{ /if }}
-
-    {{ if categories }}
-    <div class="text-xs text-gray-300">
-      {{ categories }}
-      {{ if count > 0 }}
-      {{ scope }}
-      <div>{{ title }}</div>
-      {{ /scope }}
+      {{ if teaser_card }}
+      <div class="text-sm line-clamp-2 text-green-200">{{ teaser_card }}</div>
       {{ /if }}
-      {{ /categories }}
     </div>
-    {{ /if }}
-  </div>
-</article>
+  </article>
+</a>

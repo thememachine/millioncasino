@@ -1,62 +1,44 @@
 <!-- 👋 resources/views/articles/show.antlers.html -->
-<div class="w-full aspect-video h-96 z-0">
-  {{ if primary_image }}
-  <img src="{{ glide :src="primary_image" w="900" h="300" fit="crop_focal" }}" alt="{{ primary_image:alt }}" class="w-full h-full object-cover" loading="eager" />
-  {{ /if }}
-</div>
 
-<article class="lg:grid lg:grid-cols-4 gap-2 pagewidth">
-  <div class="col-span-3">
+<div class="w-full aspect-video h-96 z-0 relative flex items-center justify-center bg-radial from-green-700 to-green-950 ">
 
-
-
-    <h1 class="text-9xl pagewidth">{{ title }}</h1>
-
+  <div class="z-10">
+    <h1 class="text-4xl lg:text-9xl pb-2">{{ title }}</h1>
     {{ if teaser }}
-    <div class="text-2xl max-w-prose mx-auto my-8">
+    <div class="text-2xl max-w-prose">
       {{ teaser }}
     </div>
     {{ /if}}
+  </div>
 
+  {{ if primary_image }}
+  <div class="absolute top-0 left-0 w-full z-0 overflow-hidden h-96">
+    <img src="{{ glide :src="primary_image" w="900" h="300" fit="crop_focal" }}" alt="{{ primary_image:alt }}" class="w-full h-full object-cover" loading="eager" />
+  </div>
+  {{ /if }}
+</div>
 
-    <aside class="pagewidth">
-      <div class="w-96 bg-slate-50 border-l-8 border-orange-800 pl-4 ">
-
-        {{ if categories }}
-        <div class="text-3xl uppercase font-bold pagewidth">
-          {{ categories }}
-          <a href="/categories/{{ slug }}" class="underline py-4">{{ title }}</a>
-          {{ /categories }}
-        </div>
-        {{ /if}}
-
-        <div class="my-2 flex flex-col gap-2 text-base">
-          <time datetime="">
-            {{ date iso_format="Do MMMM YYYY" }}
-            {{ date format="H:m" }}
-          </time>
-        </div>
-
-        {{ if tags }}
-        <div class="flex flex-wrap gap-2">
-          {{ tags }}
-          <a href="{{ url }}" class="bg-sky-100 border border-sky-200 px-1 rounded-sm">{{ title }}</a> {{ url}}
-          {{ /tags }}
-        </div>
-        {{ /if }}
-      </div>
-    </aside>
+<article class="lg:grid lg:grid-cols-4 gap-2 pagewidth border-x border-green-700">
+  <div class="col-span-3 pl-8 pt-4">
 
     {{ bard }}
     {{ partial src="components/{type}" }}
     {{ /bard }}
 
   </div>
-  <div class="col-span-1">
 
-    {{ collection:articles :limit="10" }}
-    <a href="{{ url }}"> {{ title }}</a>
+  <div class="col-span-1 flex flex-col pt-4 pr-2 gap-2">
+
+
+    {{# test what category that is selected ans show the others #}}
+    {{ if categories }}
+    {{ categories }}
+    {{ collection:articles taxonomy:categories="{slug}" }}
+    {{ partial:cards/card-small }}
     {{ /collection:articles }}
+    {{ /categories }}
+    {{ /if }}
+
 
   </div>
-  <article
+</article>

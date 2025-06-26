@@ -1,16 +1,20 @@
-<article class="bg-white border border-slate-200 rounded-lg shadow-lg">
+<!-- 👋 resources/views/partials/cards/_card.antlers.html -->
+<article class="bg-white/90 text-black rounded-md shadow-lg">
 
   {{ if image_card or primary_image }}
   <a href="{{ url }}" class="">
     <div class="w-full aspect-video">
       <img src="{{ glide :src="image_card ?? primary_image" w="400" h="200" fit="crop_focal" }}" alt="{{ image_card:alt ?? primary_image:alt }}"
-        class="aspect-video w-full h-full object-cover rounded-t-lg" loading="lazy" />
+        class="aspect-video w-full h-full object-cover rounded-t-md" loading="lazy" />
     </div>
   </a>
   {{ else }}
   <a href="{{ url }}">
     <div class="w-full aspect-video">
-      <div class="bg-slate-200 hover:bg-slate-300 transition-all w-full aspect-video text-sm flex items-center justify-center">img missing</div>
+      <div class="bg-radial from-red-700 to-red-900 transition-all duration-300 hover:from-red-800 w-full aspect-video text-sm flex items-center justify-center">
+
+        {{ svg src="chip" class="size-16" }}
+      </div>
     </div>
   </a>
   {{ /if }}
@@ -27,7 +31,7 @@
     {{ /if }}
 
     {{ if categories }}
-    <div class="text-xs text-gray-300">
+    <div class="text-xs text-gray-700 float-end">
       {{ categories }}
       {{ if count > 0 }}
       {{ scope }}
