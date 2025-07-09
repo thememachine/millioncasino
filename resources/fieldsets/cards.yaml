@@ -11,6 +11,35 @@ fields:
         - casinos
         - pages
   -
+    handle: selected_collection
+    field:
+      mode: select
+      type: collections
+      display: collections
+  -
+    handle: selected_taxonomy
+    field:
+      max_items: 1
+      mode: select
+      type: taxonomies
+      display: taxonomy
+      width: 50
+  -
+    handle: selected_term
+    field:
+      type: terms
+      display: Terms
+      width: 50
+      create: false
+  -
+    handle: number_of_entries
+    field:
+      default: '6'
+      type: integer
+      display: number
+      instructions: 'Leave blank for all entries'
+      width: 33
+  -
     handle: columns_info
     field:
       type: section

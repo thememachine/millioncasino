@@ -7,10 +7,68 @@
   </article>
   {{ /if }}
 
-  <div class="pagewidth grid {{ columns_mobile}} {{ columns }} gap-4">
+
+  <div class="pagewidth grid {{ columns_mobile ?? 'grid-cols-1' }} {{ columns ?? 'md:grid-cols-3' }} gap-4">
+
+    {{ if entries}}
     {{ entries | scope('entries') }}
     {{ partial:cards/card }}
     {{ /entries }}
+    {{ /if }}
+
+
+    {{ if selected_collection }}
+
+    {{# taxonomy #}}
+    {{ if selected_term and selected_taxonomy }}
+
+    {{ if selected_taxonomy == "category" }}
+
+    {{ collection from="{selected_collection | join('|')}"
+            taxonomy:category="{selected_term | pluck:slug | join('|')}"
+            limit="{number_of_entries}"
+            sort="date" dir="desc"
+        }}
+    {{ partial:cards/card }}
+    {{ /collection }}
+    {{/if}}
+
+
+    {{ if selected_taxonomy == "casino" }}
+
+    {{ collection from="{selected_collection | join('|')}"
+            taxonomy:casino="{selected_term | pluck:slug | join('|')}"
+            limit="{number_of_entries}"
+            sort="date" dir="desc"
+        }}
+    {{ partial:cards/card }}
+    {{ /collection }}
+    {{/if}}
+
+
+
+    {{# all the shit #}}
+    {{ else }}
+
+    {{ collection from="{selected_collection | join('|')}"
+            limit="{number_of_entries}"
+            sort="date" dir="desc"
+        }}
+
+    {{ partial:cards/card }}
+
+    {{ /collection }}
+
+    {{ /if }}
+
+    {{ /if }}
+
+
+
+
   </div>
+
+
+
 
 </section>

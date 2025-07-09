@@ -1,7 +1,0 @@
-title: Categories
-preview_targets:
-  - label: Term
-    url: "{permalink}"
-    refresh: true
-template: categories/show
-layout: layout

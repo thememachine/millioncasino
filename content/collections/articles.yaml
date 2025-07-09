@@ -3,7 +3,7 @@ template: articles/show
 layout: layout
 taxonomies:
   - tags
-  - categories
+  - category
 revisions: false
 route: '/{categories}/{year}-{month}-{day}/{slug}'
 date: true
