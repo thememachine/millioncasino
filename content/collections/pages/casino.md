@@ -4,7 +4,7 @@ blueprint: page
 title: Casino
 author: 38f5334e-ce4e-4853-bfc5-5b521d1ff108
 updated_by: aef29f6b-ac12-4f4d-8668-ef2c762a6500
-updated_at: 1752158712
+updated_at: 1752158733
 blocks:
   -
     id: mb18okgi
@@ -28,7 +28,7 @@ blocks:
     vertical: justify-center
     horizontal: items-center
     section_width: pagewidth
-    section_height_lg: 'lg:h-auto'
+    section_height_lg: 'lg:h-[75dvh]'
     section_height: h-auto
     type: hero
     enabled: true
