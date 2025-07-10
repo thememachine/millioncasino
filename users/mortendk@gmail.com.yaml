@@ -25,8 +25,7 @@ preferences:
     articles:
       columns:
         - title
-        - categories
-        - slug
+        - category
         - status
       after_save: continue_editing
   forms:

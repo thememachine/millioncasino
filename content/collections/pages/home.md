@@ -5,8 +5,24 @@ title: home
 template: home
 author: aef29f6b-ac12-4f4d-8668-ef2c762a6500
 updated_by: aef29f6b-ac12-4f4d-8668-ef2c762a6500
-updated_at: 1748034423
+updated_at: 1752122634
 blocks:
+  -
+    id: mcww93gz
+    selected_collection:
+      - banner
+    selected_taxonomy: tags
+    selected_term:
+      - 'tags::frontpage'
+    number_of_entries: 6
+    columns_mobile: grid-cols-2
+    columns: 'lg:grid-cols-2'
+    section_width: pagewidth
+    section_height_lg: 'lg:h-auto'
+    section_height: h-auto
+    type: cards
+    enabled: true
+    title: 'banner frontpage'
   -
     id: mb1ai20y
     entries:

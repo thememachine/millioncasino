@@ -22,8 +22,8 @@
     {{# taxonomy #}}
     {{ if selected_term and selected_taxonomy }}
 
+    {{# CAtegory #}}
     {{ if selected_taxonomy == "category" }}
-
     {{ collection from="{selected_collection | join('|')}"
             taxonomy:category="{selected_term | pluck:slug | join('|')}"
             limit="{number_of_entries}"
@@ -33,11 +33,21 @@
     {{ /collection }}
     {{/if}}
 
-
+    {{# casino #}}
     {{ if selected_taxonomy == "casino" }}
-
     {{ collection from="{selected_collection | join('|')}"
             taxonomy:casino="{selected_term | pluck:slug | join('|')}"
+            limit="{number_of_entries}"
+            sort="date" dir="desc"
+        }}
+    {{ partial:cards/card }}
+    {{ /collection }}
+    {{/if}}
+
+    {{# tags #}}
+    {{ if selected_taxonomy == "tags" }}
+    {{ collection from="{selected_collection | join('|')}"
+            taxonomy:tags="{selected_term | pluck:slug | join('|')}"
             limit="{number_of_entries}"
             sort="date" dir="desc"
         }}
@@ -54,21 +64,15 @@
             limit="{number_of_entries}"
             sort="date" dir="desc"
         }}
-
     {{ partial:cards/card }}
-
     {{ /collection }}
 
     {{ /if }}
 
+
     {{ /if }}
 
 
-
-
   </div>
-
-
-
 
 </section>

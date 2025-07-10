@@ -3,6 +3,7 @@ template: casinos/casino
 layout: layout
 taxonomies:
   - casino
+  - tags
 revisions: false
 route: 'casino/{slug}'
 sort_dir: asc

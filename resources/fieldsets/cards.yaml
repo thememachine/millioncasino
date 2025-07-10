@@ -30,7 +30,6 @@ fields:
       type: terms
       display: Terms
       width: 50
-      create: false
   -
     handle: number_of_entries
     field:

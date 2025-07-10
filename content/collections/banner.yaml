@@ -3,6 +3,7 @@ template: banner
 layout: layout
 taxonomies:
   - casino
+  - tags
 revisions: false
 slugs: false
 sort_dir: asc

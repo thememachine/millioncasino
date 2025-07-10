@@ -1,9 +1,6 @@
 title: Posts
 template: posts/post
 layout: layout
-taxonomies:
-  - categories
-  - tags
 revisions: false
 route: 'post/{year}-{month}-{day}/{slug}'
 sort_dir: asc

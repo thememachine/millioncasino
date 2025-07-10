@@ -2,21 +2,24 @@ nav:
   content:
     reorder:
       - 'content::collections'
+      - 'content::collections::pages'
       - 'content::collections::casinos'
       - 'content::collections::banner'
       - 'content::collections::articles'
-      - 'content::collections::posts'
-      - 'content::collections::pages'
       - 'content::navigation'
       - 'content::navigation::main'
       - 'content::navigation::footer'
       - 'content::taxonomies'
-      - 'content::taxonomies::casino'
-      - 'content::taxonomies::categories'
+      - 'content::taxonomies::category'
     items:
       'content::collections':
         display: 'Collections :'
         action: '@modify'
+        children:
+          'content::collections::posts': '@modify'
+      'content::collections::pages':
+        action: '@move'
+        icon: book-pages
       'content::collections::casinos':
         action: '@move'
         icon: collections
@@ -26,20 +29,13 @@ nav:
       'content::collections::articles':
         action: '@move'
         icon: book-open
-      'content::collections::posts':
-        action: '@move'
-        icon: entries
-      'content::collections::pages':
-        action: '@move'
-        icon: book-pages
       'content::navigation::main': '@move'
       'content::navigation::footer': '@move'
       'content::taxonomies':
         display: 'Taxonomies :'
         action: '@modify'
+      'content::taxonomies::category': '@move'
       'content::taxonomies::casino': '@move'
-      'content::taxonomies::categories': '@move'
-      'content::taxonomies::tags': '@move'
   tools:
     reorder:
       - 'tools::utilities::git'
