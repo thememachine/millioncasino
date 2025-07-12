@@ -1,4 +1,13 @@
-<section class="{{ section_width }} {{ section_height }} {{ section_height_lg }} {{ style:color_themes[color_theme] ?? '' }} ">
+{{#
+CARDS:
+    The component can display entries in two ways:
+    1. Manually selected entries via an `entries` field.
+    2. Dynamically fetched entries from one or more collections.
+    We'll prioritize manual entries first.
+#}}
+{{#https://statamic.dev/tags/collection  #}}
+<!-- 👋 resources/views/partials/components/banners.antlers.html -->
+<section class="{{ section_width ?? '' }} {{ section_height ?? '' }} {{ section_height_lg ?? '' }} {{ style:color_themes[color_theme] ?? '' }} ">
 
   {{ if title or text }}
   <article class="pagewidth">
@@ -8,11 +17,18 @@
   {{ /if }}
 
 
+  {{ if entries or selected_collection }}
   <div class="pagewidth grid {{ columns_mobile ?? 'grid-cols-1' }} {{ columns ?? 'md:grid-cols-3' }} gap-4">
 
+    {{# Entries #}}
+    {{ if entries}}
+    {{ entries | scope('entries') }}
+    {{ partial:cards/card }}
+    {{ /entries }}
+    {{ /if }}
 
+    {{# Collection #}}
     {{ if selected_collection }}
-
     {{ collection from="{ selected_collection | join('|') }"
             taxonomy:category="{ selected_category | pluck:slug | join('|') ?? false }"
             taxonomy:tags="{ selected_tag | pluck:slug | join('|') ?? false }"
@@ -26,14 +42,6 @@
     {{ /if }}
 
 
-
-    {{ if entries}}
-    {{ entries | scope('entries') }}
-    {{ partial:cards/card }}
-    {{ /entries }}
-    {{ /if }}
-
-
   </div>
-
+  {{/if}}
 </section>
