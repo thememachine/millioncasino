@@ -10,66 +10,27 @@
 
   <div class="pagewidth grid {{ columns_mobile ?? 'grid-cols-1' }} {{ columns ?? 'md:grid-cols-3' }} gap-4">
 
+
+    {{ if selected_collection }}
+
+    {{ collection from="{ selected_collection | join('|') }"
+            taxonomy:category="{ selected_category | pluck:slug | join('|') ?? false }"
+            taxonomy:tags="{ selected_tag | pluck:slug | join('|') ?? false }"
+            limit="{ number_of_entries ?? 10 }"
+            sort="{sorting}:{direction}"
+
+    }}
+    {{ partial:cards/card }}
+    {{ /collection }}
+
+    {{ /if }}
+
+
+
     {{ if entries}}
     {{ entries | scope('entries') }}
     {{ partial:cards/card }}
     {{ /entries }}
-    {{ /if }}
-
-
-    {{ if selected_collection }}
-
-    {{# taxonomy #}}
-    {{ if selected_term and selected_taxonomy }}
-
-    {{# CAtegory #}}
-    {{ if selected_taxonomy == "category" }}
-    {{ collection from="{selected_collection | join('|')}"
-            taxonomy:category="{selected_term | pluck:slug | join('|')}"
-            limit="{number_of_entries}"
-            sort="date" dir="desc"
-        }}
-    {{ partial:cards/card }}
-    {{ /collection }}
-    {{/if}}
-
-    {{# casino #}}
-    {{ if selected_taxonomy == "casino" }}
-    {{ collection from="{selected_collection | join('|')}"
-            taxonomy:casino="{selected_term | pluck:slug | join('|')}"
-            limit="{number_of_entries}"
-            sort="date" dir="desc"
-        }}
-    {{ partial:cards/card }}
-    {{ /collection }}
-    {{/if}}
-
-    {{# tags #}}
-    {{ if selected_taxonomy == "tags" }}
-    {{ collection from="{selected_collection | join('|')}"
-            taxonomy:tags="{selected_term | pluck:slug | join('|')}"
-            limit="{number_of_entries}"
-            sort="date" dir="desc"
-        }}
-    {{ partial:cards/card }}
-    {{ /collection }}
-    {{/if}}
-
-
-
-    {{# all the shit #}}
-    {{ else }}
-
-    {{ collection from="{selected_collection | join('|')}"
-            limit="{number_of_entries}"
-            sort="date" dir="desc"
-        }}
-    {{ partial:cards/card }}
-    {{ /collection }}
-
-    {{ /if }}
-
-
     {{ /if }}
 
 

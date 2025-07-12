@@ -26,6 +26,7 @@ preferences:
       columns:
         - title
         - category
+        - tags
         - status
       after_save: continue_editing
   forms:

@@ -70,11 +70,6 @@ return [
     ],
     [
       'type' => 'collection_count',
-      'collection' => 'posts',
-      'width' => '25'
-    ],
-    [
-      'type' => 'collection_count',
       'collection' => 'articles',
       'width' => '25'
     ],
@@ -91,7 +86,7 @@ return [
     ],
     [
       'type' => 'collection_count',
-      'collection' => 'categories',
+      'collection' => 'category',
       'width' => '25'
     ],
     [

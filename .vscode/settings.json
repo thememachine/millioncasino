@@ -9,18 +9,18 @@
     "tab.inactiveForeground": "#BBBBBB"
   },
   "files.exclude": {
-    ".nvmrc": true,
-    "app/": true,
-    "artisan": true,
-    "bootstrap/": true,
-    "database": true,
-    "lang/": true,
-    "phpunit.xml": true,
-    "please": true,
-    "public/": true,
-    "README.md": true,
-    "routes/": true,
-    "tests/": true,
-    "vite.config.js": true
+    ".nvmrc": false,
+    "app/": false,
+    "artisan": false,
+    "bootstrap/": false,
+    "database": false,
+    "lang/": false,
+    "phpunit.xml": false,
+    "please": false,
+    "public/": false,
+    "README.md": false,
+    "routes/": false,
+    "tests/": false,
+    "vite.config.js": false
   }
 }

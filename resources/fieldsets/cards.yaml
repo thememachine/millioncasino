@@ -1,4 +1,4 @@
-title: Cards
+title: mortendk@gmail.com
 fields:
   -
     handle: entries
@@ -17,18 +17,22 @@ fields:
       type: collections
       display: collections
   -
-    handle: selected_taxonomy
-    field:
-      max_items: 1
-      mode: select
-      type: taxonomies
-      display: taxonomy
-      width: 50
-  -
-    handle: selected_term
+    handle: selected_category
     field:
       type: terms
-      display: Terms
+      display: Category
+      width: 50
+      mode: select
+      taxonomies:
+        - category
+  -
+    handle: selected_tag
+    field:
+      mode: select
+      taxonomies:
+        - tags
+      type: terms
+      display: Tags
       width: 50
   -
     handle: number_of_entries
@@ -36,7 +40,34 @@ fields:
       default: '6'
       type: integer
       display: number
-      instructions: 'Leave blank for all entries'
+      width: 33
+  -
+    handle: sorting
+    field:
+      options:
+        -
+          key: date
+          value: null
+        -
+          key: title
+          value: null
+      default: date
+      type: button_group
+      display: Sorting
+      width: 33
+  -
+    handle: direction
+    field:
+      options:
+        -
+          key: asc
+          value: asc
+        -
+          key: desc
+          value: desc
+      default: desc
+      type: button_group
+      display: Direction
       width: 33
   -
     handle: columns_info
